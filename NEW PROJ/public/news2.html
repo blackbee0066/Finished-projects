@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+    
+        <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+        
+        <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    
+        <link rel="stylesheet" href="./css/styles.css">
+        <title>GhanaHomePage</title>
+    </head>
+    <body>
+        <header>
+            <div class="container" id="container">
+                <div class="logo">
+                    <a href="Home.html" class="logo-link">
+                        <img src="./images/ghanaweb.png" class="logo-image" alt="logo-image">
+                    </a>
+                </div>
+    
+                <div class="mobile-icons" id="mobileIcons">
+                    <i class="ri-search-line mobile-search-icon" id="mobileSearchIcon"></i>
+    
+                    <i class="ri-user-3-line mobile-user" id="mobileUser"></i>
+    
+                    <i class="ri-menu-line mobile-menu" id="mobileMenu"></i>
+                </div>
+    
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook social-btns"></i></a>
+                    <a href="#"><i class="fab fa-instagram social-btns"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter social-btns"></i></a>
+                </div>
+    
+                <div class="search-box">
+                    <form>
+                        <input type="search" name="search" id="search" placeholder="Search">
+                        <div class="search-icons">
+                            <button type="submit"><i class='bx bx-search'></i></button>
+                            <i class="fas fa-times clear-search" id="clearSearch"></i>
+                        </div>
+                    </form>
+                </div>
+                
+        
+                <nav class="nav-links" id="navLinks">
+                    <ul class="nav-lists">
+                        <li><a href="#">Self Service Advert</a></li>
+                        <li><a href="#">Site Map</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+    
+                    <!-----Close Mobile Menu------>
+    
+                    <div class="mobile-menu-close" id="mobileMenuClose">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </nav>
+        
+    
+                <div class="login-signup-btns">
+                    <div id="registerModalContainer">
+                        <a href="#" class="signUp signup-btn" id="openRegister">Sign Up</a>
+                    </div>
+    
+                    <div class="loginModalContainer">
+                        <a href="#" class="logIn login-btn" id="openLogin">Login</a>
+                    </div>
+                </div>
+                
+                <!-----------Register modal------------>
+    
+                <div class="modal-overlay" id="registerModalOverlay"></div>
+    
+                    <div class="register-container modal" id="register-section">
+                      
+                        <div class="register-left-panel">
+                            <div class="register-greeting">
+                                <h1>Welcome!</h1>
+                                <p>Create an account to get started</p>
+                            </div>
+                            <div class="register-terms">
+                                <h4>Terms and Conditions</h4>
+                                <ul>
+                                    <li>You are only allowed to submit content that you have created yourself.</li>
+                                    <li>You are not allowed to upload photos pretending to be someone else.</li>
+                                    <li>No nudity, pornography, or unlawful content is permitted.</li>
+                                    <li>You grant GhanaWeb the right to publish and use your content.</li>
+                                    <li>GhanaWeb reserves the right to reject/remove your content without explanation.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                        <div class="register-right-panel">
+                            <i class='bx bx-x-circle close-register' id="closeRegister"></i>
+                            <h2>REGISTER</h2>
+                            <p>Already have an account? <a href="#" id="desktopLogin">Sign in</a></p>
+                    
+                            <form class="register-inputs" id="desktopRegisterForm">
+                                <div class="register-grid">
+                                    <div class="field-group">
+                                        <label for="reg-surname">Surname</label>
+                                        <input type="text" name="surname" id="reg-surname" required>
+                                    </div>
+                    
+                                    <div class="field-group">
+                                        <label for="reg-other-names">Other names</label>
+                                        <input type="text" name="other-names" id="reg-other-names" required>
+                                    </div>
+                    
+                                    <div class="field-group">
+                                        <label for="reg-email">Email</label>
+                                        <input type="email" name="email" id="reg-email" required>
+                                    </div>
+
+                                    <div class="field-group">
+                                        <label for="reg-password">Password</label>
+                                        <input type="password" name="password" id="reg-password" required>
+                                    </div>
+                    
+                                    <div class="field-group">
+                                        <label for="phone">Phone</label>
+                                        <input type="tel" id="phone" name="phone">
+                                    </div>
+                    
+                                    <div class="field-group">
+                                        <label for="reg-dob">Date of Birth</label>
+                                        <input type="date" id="reg-dob" name="dob" required>
+                                    </div>
+                    
+                                    <div class="field-group">
+                                        <label for="reg-gender">Gender</label>
+                                        <select id="reg-gender" name="gender" required>
+                                            <option value="">Select option</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+                    
+                                <div class="field-group">
+                                    <label for="reg-terms">Do you accept the terms?</label>
+                                    <select id="reg-terms" name='terms' required>
+                                        <option value="">No, I reject the terms</option>
+                                        <option value="yes">Yes, I accept the terms</option>
+                                    </select>
+                                </div>
+                                
+                    
+                                <div class="mobile-field-group">
+                                    <div class="terms-policy">  
+                                        <input type="checkbox" id="reg-terms-checkbox" name="termsCheckbox" required>
+                                        <label for="reg-terms-checkbox" class="mobile-policy">
+                                        By continuing, you agree to the Terms & Privacy Policy
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="field-group">
+                                    <button type="submit" class="register-btn" type="submit">Sign Up</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                
+    
+                <!-----------Login  modal------------>
+    
+                    <div class="modal-overlay" id="modalOverlay"></div>
+                    <div class="login-container modal" id="login-section">
+                        <div class="login-left-panel">
+                            <h1>Welcome Back!</h1>
+                            <p>Sign in to continue</p>
+                        </div>
+                    
+                        <div class="login-right-panel">
+                            <i class='bx bx-x-circle close-login' id="closeLogin"></i>
+                            <h2>LOG IN</h2>
+                            <p>New here? <a href="#" id="desktopRegister">Create an account</a></p>
+                    
+                            <form action="" id="desktopLoginForm">
+                                <div class="field-wrapper">
+                                    <input type="text" name="user-email" id="user-email" placeholder="Email" required>
+                                    <i class='bx bxs-envelope login-icon'></i>
+                                </div>
+                                
+                                <div class="field-wrapper">
+                                    <input type="password" name="user-password" id="user-password" placeholder="Password" required>
+                                    <i class="fa-solid fa-eye login-icon"></i>
+                                </div>
+                    
+                                <div class="field-wrapper">
+                                    <a href="#" class="forgot-password">Forgot password?</a>
+                                </div>
+                    
+                                <div class="field-wrapper">
+                                    <button class="login-btn" type="submit">Sign in</button>
+                                </div>
+
+                            </form>
+
+                            <div class="field-wrapper">
+                                <a href="#" id="logoutBtn" style="display: none;">
+                                    Logout
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+        </header>
+
+        <!------MOBILE SEARCH DEVICE------->
+
+        <div class="mobile-search" id="mobileSearch">
+       
+
+            <form action="" class="search-form">
+                <i class="ri-search-line search-icon"></i>
+
+                <input type="search" class="search-input" id="searchInput" placeholder="search here">
+                <p>hbsdhjnmbsj</p>
+            </form>
+
+            <i class="ri-close-line search-close" id="searchClose"></i>
+        </div>
+
+    
+        <!-----------MOBILE REGISTER DEVICE--------------->            
+        <div class="mobile-register-container mobile-modal" id="mobileRegisterSection">
+      
+            <div class="mobile-register-form" id="mobileRegisterWrapper">
+                <div class="register-top-panel">
+
+                    <div class="mobile-register-greeting">
+                        <h1>Hello,</h1>
+                        <p>Sign Up to get started</p>
+                    </div>
+
+                    <div class="mobile-register-terms">
+                        <h4>Terms and Conditions</h4>
+                    </div>
+
+                </div>
+    
+                <div class="register-bottom-panel">
+
+                    <h2 class="mobile-h2">REGISTER</h2>
+                    <p class="mobile-p">
+                        Already have an account? <a href="#" id="mobileGoToLogin">Sign in</a>
+                    </p>
+                    
+                    
+    
+                    <form action="" class="register-inputs" id="mobileRegisterForm">
+                        <div class="mobile-register-grid">
+
+                            <div class="mobile-field-group">
+                                <label for="reg-surname">Surname</label>
+                                <input type="text" name="surname" id="mobile-reg-surname" required>
+                            </div>
+    
+                            <div class="mobile-field-group">
+                                <label for="reg-other-names">Other names</label>
+                                <input type="text" name="other-names" id="mobile-reg-other-names" required>
+                            </div>
+    
+                            <div class="mobile-field-group">
+                                <label for="reg-email">Email</label>
+                                <input type="email" name="email" id="mobile-reg-email" autocomplete="none" required>
+                            </div>
+
+                            <div class="mobile-field-group">
+                                <label for="reg-password">Password</label>
+                                <input type="password" name="password" id="mobile-reg-password" required>
+                                <!--<i class="fa-solid fa-eye mobile-login-icon"></i>-->
+                            </div>
+    
+                            <div class="mobile-field-group">
+                                <label for="reg-phone">Phone</label>
+                                <input type="tel" id="mobile-phone" name="phone">
+                            </div>
+    
+                            <div class="mobile-field-group">
+                                <label for="reg-dob">Date of Birth</label>
+                                <input type="date" id="mobile-reg-dob" name="dob" required>
+                            </div>
+    
+                            <div class="mobile-field-group">
+                                <label for="reg-gender">Gender</label>
+
+                                <select id="mobile-reg-gender" name="gender" required>
+                                    <option value="">Select option</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+
+                        </div>
+    
+                        <div class="mobile-field-group">
+                            <label for="mobile-reg-terms">Do you accept the terms?</label>
+                            <select id="mobile-reg-terms" name="terms" required>
+                                <option value="">No, I reject the terms</option>
+                                <option value="yes">Yes, I accept the terms</option>
+                            </select>
+                        </div>
+    
+                        <div class="mobile-field-group">
+                            <div class="terms-policy">  
+                                <input type="checkbox" id="reg-terms-checkbox" name="termsCheckbox" required>
+                                <label for="reg-terms-checkbox" class="mobile-policy">
+                                By continuing, you agree to the Terms & Privacy Policy
+                                </label>
+                            </div>
+                        </div>
+                          
+
+                        <div class="mobile-field-group">
+                            <button type="submit" class="mobile-register-btn" type="submit">Sign Up</button>
+                        </div>
+                    
+
+                    </form>
+
+                </div>
+            </div>
+
+            <i class='bx bx-x-circle mobile-close-register' id="mobileCloseRegister"></i>
+
+        </div>
+
+
+    
+        <!--------MOBILE LOGIN DEVICE--------->
+
+
+        <div class="mobile-login-container mobile-modal" id="mobileLoginSection">
+    
+            <div class="mobile-login-form">
+    
+                <div class="login-top-panel">
+                    <h1>Welcome,</h1>
+                    <p>Sign in to continue</p>
+                </div>
+          
+                <div class="login-bottom-panel">
+                    
+                    <h2 class="mobile-h2">SIGN IN</h2>
+                    <p class="mobile-p">New here? <a href="#" id="mobileGoToRegister">Create an account</a></p>
+          
+                        <form action="" id="mobileLoginForm">
+                            <div class="mobile-field-wrapper">
+                                <input type="text" name="user-email" id="user-email" placeholder="Email" required>
+                                <i class='bx bxs-envelope mobile-login-icon'></i>
+                            </div>
+                      
+                            <div class="mobile-field-wrapper">
+                                <input type="password" name="user-password" id="user-password" placeholder="Password" required>
+                                <i class="fa-solid fa-eye mobile-login-icon"></i>
+                            </div>
+          
+                            <div class="mobile-field-wrapper">
+                                <a href="#" class="forgot-password">Forgot password?</a>
+                            </div>
+          
+                            <div class="mobile-field-wrapper">
+                                <button class="mobile-login-btn" type="submit">Sign in</button>
+                            </div>
+
+                           
+                        </form>
+
+                         <!----LOGOUT BUTTON----->
+                         <div class="field-wrapper">
+                            <a href="#" id="logoutBtn" style="display: none;">
+                                Logout
+                            </a>
+                        </div>
+                </div>
+            </div>   
+            <i class='bx bx-x-circle mobile-close-login' id="mobileCloseLogin"></i> 
+        </div>
+    
+
+
+        <!---------- SWIPER------------>
+
+        <div class="swiper mySwipper" id="swiperContainer">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/prez arrival.jpg" alt="Slide" class="slide-image">
+                    <div class="image_data">
+                        <a href="#" class="text"> 68th Independence Day </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./images/IND-20.webp" alt="Slide" class="slide-image">
+                    <div class="image_data">
+                        <a href="#" class="text"> Chiefs at 68th Independence Day </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./images/Ghana-Parliament-budget.jpg" alt="Slide" class="slide-image">
+                    <div class="image_data">
+                        <a href="#" class="text">Reading of the 2025 mini budget</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./images/signal.jpg" alt="Slide" class="slide-image">
+                    <div class="image_data">
+                        <a href="#" class="text">Independence Day at The Naval base </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next nav-btn"></div>
+            <div class="swiper-button-prev nav-btn"></div>
+       
+
+       
+        </div>
+
+        <!--------------------OTHER LINKS----------------->
+
+        <!-- Swiper Container -->
+        <!-- Swiper Container -->
+        <div class="swiper link-swiper-container" id="mySwiperLink">
+            <div class="swiper-wrapper link-swiper-wrapper">
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="Home.html" class="thin-bg-link home-link">Home</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="news.html" class="thin-bg-link news-link">News</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="sports.html" class="thin-bg-link sports-link">Sports</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="Business.html" class="thin-bg-link business-link">Business</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="Entertainment.html" class="thin-bg-link entertainment-link">Entertainment</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="Africa.html" class="thin-bg-link africa-link">Africa</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="GhanaWebTV.html" class="thin-bg-link ghanawebtv-link">GhanaWebTV</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="opinions.html" class="thin-bg-link opinions-link">Opinions</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="cartoons.html" class="thin-bg-link cartoons-link">Cartoons</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="SayItLoud.html" class="thin-bg-link sayitloud-link">Say It Loud</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="Country.html" class="thin-bg-link country-link">Country</a>
+              </div>
+          
+            </div>
+        </div>
+
+    
+
+        <!---------NEWS SECTION---------->
+
+        <section class="news-section">
+            <div class="news-top-layer">
+                 <div class="news-top-layer-style">
+                    News
+                </div>
+
+                <div class="country-top-layer-links">
+                    <a href="#">Home-News</a>
+                    <a href="#">Election 2024</a>
+                    <a href="#">Twi News | Tv</a>
+                    <a href="">Polls</a>
+                    <a href="news.html">Press Release</a>
+                    <a href="News.html">News Blogs</a>
+                    <a href="">News Archive</a>
+                    <a href="#">Crime and Punishment</a>
+                    <a href="#">Politics</a>
+
+                    <div class="country-dropdown-container">
+                        <a href="#" class="country-dropdown-toggle">
+                            More <span class="triangle">&#9662;</span>
+                        </a>
+
+                        <div class="country-dropdown-menu">
+                            <a href="#">Regional</a>
+                            <a href="#">Editorial</a>
+                            <a href="#">Health</a>
+                            <a href="#">Ghanaians Abroad</a>
+                            <a href="#">Tabloid</a>
+                            <a href="#">Africa</a>
+                            <a href="#">Religion</a>
+                            <a href="#">Corona Virus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-second-layer">
+                <div class="news-left-panel">
+                    <p class="grid-head">General News</p> 
+
+                    <div class="news-grid-container">
+
+                        <!-- News Boxes -->
+                        <div class="news-box1">
+                            <a href="./home/You're-doing-same things.html" class="news-box1-content">
+                                <img src="./images/15351127.jpg" alt="">
+                                <div class="news-box1-text">
+                                    <h3 class="news-h3">Your're doing the same things that ruin NPP - Barker Varmawor cautions NDC</h3>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="news-box2">
+                            <a href="#" class="news-box2-content">
+                                <img src="./images/NEWS/news-box2.jpg" alt="">
+                                <div class="news-box2-text">
+                                    <h4 class="news-h3"> Whiles Kumasi burns, he's online claimimg to be the best Regional Minister - locals blast Dr Amoakohene.</h4>
+                                </div>
+                            </a>
+
+                            <!--NEWS AD BAR-->
+
+                            <div class="news-ad-bar">
+                                <h4 class="news-latest">JUST IN</h4>
+                                <p class="latest">CJ expands jury selection to all eligible citizens to improve justice delivery </p>
+                            </div>
+
+                        </div>
+
+                        <div class="four-split">
+                            <div class="news-box3">
+                                <a href="#"     class="news-box3-content">
+                                    <img src="./images/NEWS/news-box3.jpg" alt="">
+                                    <div class="news-box3-text">
+                                        <h4 class="news-h4">I know NDC will fall but i didn't expect it to happen this early - <!--Annoh Dompreh</h4>-->
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="news-box4">
+                                <a href="#" class="news-box4-content">
+                                    <img src="./images/NEWS/cj.jpg" alt="">
+                                    <div class="news-box4-text">
+                                        <h4 class="news-h4">Supreme Court adjourns suit processes for CJ removal</h4>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="news-box5">
+                                <a href="#" class="news-box5-content">
+                                    <img src="./images/NEWS/news-box5.jpg" alt="">
+                                    <div class="news-box5-text">
+                                        <h4 class="news-h4">Parliament must punish Ntim Fordjour - Ricketts Haggan</h4>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="news-box6">
+                                <a href="#" class="news-box6-content">
+                                    <img src="./images/NEWS/ag.jpg" alt="">
+                                    <div class="news-box6-text">
+                                        <h4 class="news-h4">AG replies Godfred Dame over comments on absence in court <!--slams KMS boss--></h4>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>    
+
+                    <!-----------Ad Panel---------->
+            
+                    <div class="ad-panel">
+                        <div class="ad-block">Block 1</div>
+                        <div class="ad-block">Block 2</div>
+                        <div class="ad-block">Block 3</div>
+                    </div>
+
+
+                   <!-------CONTAINER FOR BOTH SECTIONS-------->
+
+                    <div class="main-container">
+
+                        <!-------MOST READ-------->
+
+                        <div class="most-read-section">
+                            <h3 class="most-read">Most Read</h3>
+                            
+                            <div class="most-read-container">
+                                
+                                <div class="most-read-box">
+                                    <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Meet-Lukumanu-Iddrisu-the-first-Ghanaian-to-become-a-municipal-councilor-in-Finland-1980273" class="most-read-content">
+                                        <img src="./images/NEWS/Lukumanu.jpg" alt="">
+                                    </a>
+
+                                    <div class="most-read-text">
+                                        <p>
+                                            <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Meet-Lukumanu-Iddrisu-the-first-Ghanaian-to-become-a-municipal-councilor-in-Finland-1980273">Meet Lukumanu Iddrisu, the first ghanaian to become a municipal councilor at Finland</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="most-read-box">
+                                    <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Ghanaian-officer-cadet-at-Royal-Military-Academy-in-UK-awarded-Sandhurst-Medal-1980271" class="most-read-content">
+                                        <img src="./images/NEWS/cadet.jpg" alt="">
+                                    </a>
+
+                                    <div class="most-read-text">
+                                        <p>
+                                            <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Ghanaian-officer-cadet-at-Royal-Military-Academy-in-UK-awarded-Sandhurst-Medal-1980271"> Ghanaian cadet officer at Royal Military Academy in UK awarded sandhurst medal</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="most-read-box">
+                                    <a href="#" class="most-read-content">
+                                        <img src="./images/NEWS/must-go.jpg" alt="">
+                                    </a>
+
+                                    <div class="most-read-text">
+                                        <p>
+                                            <a href="#"> If the apex court rules, that CJ must go, then so be it - Benjamin Ayeh</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="most-read-box">
+                                    <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/It-s-a-joke-real-change-can-t-happen-in-just-four-years-Duncan-Williams-1980439" class="most-read-content">
+                                        <img src="./images/NEWS/Duncan.jpg" alt="">
+                                    </a>
+
+                                    <div class="most-read-text">
+                                        <p>
+                                            <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/It-s-a-joke-real-change-can-t-happen-in-just-four-years-Duncan-Williams-1980439">It's a joke, everything cannot change in four years - Duncan Williams</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="most-read-box">
+                                    <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Foreign-affairs-ministry-to-facilitate-return-reintegration-of-Ghanaians-deportees-from-US-1980387" class="most-read-content">
+                                        <img src="./images/NEWS/okudzeto.jpg" alt="">
+                                    </a>
+
+                                    <div class="most-read-text">
+                                        <p>
+                                            <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Foreign-affairs-ministry-to-facilitate-return-reintegration-of-Ghanaians-deportees-from-US-1980387">Foreign affairs minister to facilitate return, reintegrattion of the Ghanaian deportees from US</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="most-read-box">
+                                    <a href="https://www.ghanaweb.com/GhanaHomePage/politics/The-Oquaye-report-does-not-blame-Akufo-Addo-Bawumia-or-Ken-Ofori-Atta-for-NPP-s-defeat-Ahiagbah-1980425" class="most-read-content">
+                                        <img src="./images/NEWS/Oquaye.jpg" alt="">
+                                    </a>
+
+                                    <div class="most-read-text">
+                                        <p>
+                                            <a href="https://www.ghanaweb.com/GhanaHomePage/politics/The-Oquaye-report-does-not-blame-Akufo-Addo-Bawumia-or-Ken-Ofori-Atta-for-NPP-s-defeat-Ahiagbah-1980425">The Oquaye report does not blame Akuffo Addo, Bawumia, Ken Offori Attah or the NPP's defeat - Ahiagba</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="most-read-box">
+                                    <a href="https://www.ghanaweb.com/GhanaHomePage/regional/Atwima-Mponua-MP-reaffirms-commitment-to-infrastructural-development-1980423" class="most-read-content">
+                                        <img src="./images/NEWS/Infrastructure.jpg" alt="">
+                                    </a>
+
+                                    <div class="most-read-text">
+                                        <p>
+                                            <a href="https://www.ghanaweb.com/GhanaHomePage/regional/Atwima-Mponua-MP-reaffirms-commitment-to-infrastructural-development-1980423">Atwima Mponua MP reaffirms commitment of infrastructural development</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="most-read-box">
+                                    <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/GhanaWeb-to-stream-Kwahu-Business-Forum-as-government-targets-600-businesses-by-2028-1980380" class="most-read-content">
+                                        <img src="./images/NEWS/600jpg.jpg" alt="">
+                                    </a>
+
+                                    <div class="most-read-text">
+                                        <p>
+                                            <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/GhanaWeb-to-stream-Kwahu-Business-Forum-as-government-targets-600-businesses-by-2028-1980380">GhanaWeb to stream Kwahu Business Forum as gorvenment targets 600 businesses by 2028</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <!-------MOST READ2---------->
+
+                            <div class="most-read2">
+
+                                <div class="first2-most-read">
+
+                                    <div class="most-read2-box">
+                                        <div class="most-read2-content">
+                                            <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Let-s-reach-out-to-the-marginalised-Rt-Rev-Dr-Dogbe-to-Ghanaians-1980436">
+                                            <img src="./images/NEWS/dogbe.jpg" alt=""></a>
+
+                                            <div class="most-read2-text">
+                                                <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Let-s-reach-out-to-the-marginalised-Rt-Rev-Dr-Dogbe-to-Ghanaians-1980436">Let's reach out to the marginalized - Rt Rev Dr Dogbe to Ghanaians</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="most-read2-box">
+                                        <div class="most-read2-content">
+                                            <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Easter-is-a-call-to-higher-moral-standards-Catholic-Bishop-1980437">
+                                            <img src="./images/NEWS/bishop.jpg" alt=""></a>
+
+                                            <div class="most-read2-text">
+                                                <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Easter-is-a-call-to-higher-moral-standards-Catholic-Bishop-1980437">Easter is a call to higher morals standard - Catholic bishop</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="most-read2-box">
+                                        <div class="most-read2-content">
+                                            <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Parliament-Health-Committee-tours-Regional-and-Teaching-Hospitals-1980440">
+                                            <img src="./images/NEWS/health.jpg" alt=""></a>
+
+                                            <div class="most-read2-text">
+                                                <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Parliament-Health-Committee-tours-Regional-and-Teaching-Hospitals-1980440">Parliament Health tours Regional and Teaching hospitals</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="most-read2-box">
+                                        <div class="most-read2-content">
+                                            <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Former-STC-boss-expresses-disappointment-in-current-NDC-government-1980429">
+                                            <img src="./images/NEWS/asogli.jpg" alt=""></a>
+
+                                            <div class="most-read2-text">
+                                                <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Former-STC-boss-expresses-disappointment-in-current-NDC-government-1980429">Asogli States destools Ho Bankoe Amankrado over misconduct, insubordination</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="most-read2-box">
+                                        <div class="most-read2-content">
+                                            <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/UEW-Student-s-Alleged-Suicide-Psychologist-explains-underlying-causes-1980386">
+                                            <img src="./images/NEWS/suicide.jpg" alt=""></a>
+
+                                            <div class="most-read2-text">
+                                                <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/UEW-Student-s-Alleged-Suicide-Psychologist-explains-underlying-causes-1980386">UEW student's alleged suicide: psychologist explains underlying causes</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="most-read2-box">
+                                        <div class="most-read2-content">
+                                            <a href="https://www.ghanaweb.com/GhanaHomePage/regional/Odumase-Circuit-Court-jails-okada-rider-10-years-for-trafficking-Nigerian-women-1980363">
+                                            <img src="./images/NEWS/okada.jpg" alt=""></a>
+
+                                            <div class="most-read2-text">
+                                                <a href="https://www.ghanaweb.com/GhanaHomePage/regional/Odumase-Circuit-Court-jails-okada-rider-10-years-for-trafficking-Nigerian-women-1980363">Odumase Circuit Court jails 'Okada' rider 10 years for trafficking women to Nigeria </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="most-read2-box">
+                                        <div class="most-read2-content">
+                                            <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Uplift-others-as-you-rise-Lebanese-Ambassador-to-UniMAC-students-1980421">
+                                            <img src="./images/NEWS/uplift.jpg" alt=""></a>
+
+                                            <div class="most-read2-text">
+                                                <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Uplift-others-as-you-rise-Lebanese-Ambassador-to-UniMAC-students-1980421">Uplift others whiles you rise - Lebanese Ambasador to UniMac students</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="most-read2-box">
+                                        <div class="most-read2-content">
+                                            <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Bawku-Conflict-The-genesis-struggles-updates-of-a-century-long-struggle-for-power-and-identity-1980303">
+                                            <img src="./images/NEWS/bawku.jpg" alt=""></a>
+
+                                            <div class="most-read2-text">
+                                                <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Bawku-Conflict-The-genesis-struggles-updates-of-a-century-long-struggle-for-power-and-identity-1980303">Bawku conflicts: The genesis, struggles, updates of a century-long struggle for power and identity</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                
+                                <div class="most-read2-box span-two-columns">   <!-- This box spans two columns -->
+                                    <div class="most-read-span-content">
+                                        <a href="#">
+                                            <img src="./images/NEWS/real est.jpeg" alt="">
+                                        </a>
+                                        
+                                    </div>
+                                </div>
+
+
+                                <!--------NEXT 4 LAYERS---------->
+
+                               <!-- <div class="most-read-container">
+                                
+                                    <div class="most-read-box">
+                                        <a href="#" class="most-read-content">
+                                            <img src="./images/NEWS/ibrahim.jpg" alt="">
+                                        </a>
+    
+                                        <div class="most-read-text">
+                                            <p>
+                                                <a href="#">Ibrahim Mahama refutes viral claims to crypto trading with John Mahama</a>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>-->
+
+                            </div>  
+                            
+                            <div class="most-read-container">
+                                <div class="most-read-box">
+                                    <a href="#" class="most-read-content">
+                                        <img src="./images/NEWS/Weija.jpg" alt="">
+                                    </a>
+
+                                    <div class="most-read-text">
+                                        <p>
+                                            <a href="#">Persistent power outages in Weija-Gbawei is disrupting livelihoods - Ahmed Shaibe cries out</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="most-read-box">
+                                    <a href="#" class="most-read-content">
+                                        <img src="./images/NEWS/bempa-saga.jpg" alt="">
+                                    </a>
+
+                                    <div class="most-read-text">
+                                        <p>
+                                            <a href="#">Stop treating Owusu Bempah with kid gloves and call him to order - Chairman Dollar to NPP</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="most-read-box">
+                                    <a href="#" class="most-read-content">
+                                        <img src="./images/NEWS/thieves.jpg" alt="">
+                                    </a>
+
+                                    <div class="most-read-text">
+                                        <p>
+                                            <a href="#">Thieves allegedly break into warehouse in Techieman and steal drought relief items for farmers</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="most-read-box">
+                                    <a href="#" class="most-read-content">
+                                        <img src="./images/NEWS/security.jpg" alt="">
+                                    </a>
+
+                                    <div class="most-read-text">
+                                        <p>
+                                            <a href="#">Police anounce security arrangements for Easter</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="most-read-box">
+                                    <a href="#" class="most-read-content">
+                                        <img src="./images/NEWS/war.jpg" alt="">
+                                    </a>
+
+                                    <div class="most-read-text">
+                                        <p>
+                                            <a href="#">Okyeman environmental protection brigade declares war on illegal mining along Birim river</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="most-read-box">
+                                    <a href="#" class="most-read-content">
+                                        <img src="./images/NEWS/hospital.jpg" alt="">
+                                    </a>
+
+                                    <div class="most-read-text">
+                                        <p>
+                                            <a href="#">PHEF: A time to focus on all epidemic diseases for prevention</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="most-read-box">
+                                    <a href="#" class="most-read-content">
+                                        <img src="./images/NEWS/ahiagba.jpg" alt="">
+                                    </a>
+
+                                    <div class="most-read-text">
+                                        <p>
+                                            <a href="#">Richard Ahiagbah wars against fake versions of confidential party report </a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="most-read-box">
+                                    <a href="#" class="most-read-content">
+                                        <img src="./images/NEWS/kumasi.jpg" alt="">
+                                    </a>
+
+                                    <div class="most-read-text">
+                                        <p>
+                                            <a href="#">What the Kumasi Mayor said is the truth, but flogging market women is wrong - Former NPP MP</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <!------LATEST NEWS SECTION------->
+
+                        <div class="latests-news">
+                            <h3 class="latests">Latest News</h3>
+                            <div class="latests-news-container">
+
+                                <div class="latests-news-box">
+                                    <h6 class="time">20m</h6>
+                                    <p class="briefing">
+                                        <a href="#"> EOCO arrest 35 traffickers for keeping over 200 victims at Oyarifa</a>
+                                    </p>
+                                </div>
+
+                                <div class="latests-news-box">
+                                    <h6 class="time">30m</h6>
+                                    <p class="briefing">
+                                        <a href="#">parliament Health committee tours Regional and Teaching hospitals</a>
+                                    </p>
+                                </div>
+
+                                <div class="latests-news-box">
+                                    <h6 class="time">40m</h6>
+                                    <p class="briefing">
+                                        <a href="#">It's a joke, real change can't happen in four years - Duncan Williams</a>
+                                    </p>
+                                </div>
+
+                                <div class="latests-news-box">
+                                    <h6 class="time">1hr</h6>
+                                    <p class="briefing">
+                                        <a href="#">touch Chief Justice and risk making judiciary subsidiary of executive - Manhyia</a>
+                                    </p>
+                                </div>
+
+                                <div class="latests-news-box">
+                                    <h6 class="time">1hr</h6>
+                                    <p class="briefing">
+                                        <a href="#">Easter is a call to higher morals standard - Catholic Bishop</a>
+                                    </p>
+                                </div>
+
+                                <div class="latests-news-box">
+                                    <h6 class="time">1hr</h6>
+                                    <p class="briefing">
+                                        <a href="#">Let's reach out to the marginalized - Rev Dr Dogbe</a>
+                                    </p>
+                                </div>
+
+                                <div class="latests-news-box">
+                                    <h6 class="time">2hr</h6>
+                                    <p class="briefing">
+                                        <a href="#">I am happy NPP is in opposition - Former Regional Minister</a>
+                                    </p>
+                                </div>
+
+                                <div class="latests-news-box">
+                                    <h6 class="time">2hr</h6>
+                                    <p class="briefing">
+                                        <a href="#">A plus threatens NIB not to question him over  MP who took bribe to kill the NSS story </a>
+                                    </p>
+                                </div>
+
+                                <div class="latests-news-box">
+                                    <h6 class="time">3hr</h6>
+                                    <p class="briefing">
+                                        <a href="#">
+                                            'You can't leave your wife and insult me' - NPP's Jennifer Queen to Hopeson Adorye
+                                        </a>
+                                    </p>
+                                </div>
+
+                                <div class="latests-news-box">
+                                    <h6 class="time">3hr</h6>
+                                    <p class="briefing">
+                                        <a href="#">Bekwai MP embarks on a 'thank you' tour to hos constituency</a>
+                                    </p>
+                                </div>
+
+                                <div class="latests-news-box">
+                                    <h6 class="time">3hr</h6>
+                                    <p class="briefing">
+                                        <a href="#">'He is a vvery kind and a lovely person' - NDC MP praises Afenyo Markin</a>
+                                    </p>
+                                </div>
+
+                                <div class="latests-news-box">
+                                    <h6 class="time">3hr</h6>
+                                    <p class="briefing">
+                                        <a href="#">What the Kumasi Mayor said is the truth but flogging market women is wrong - Former NPP MP</a>
+                                    </p>
+                                </div>
+
+                                <div class="latests-news-box">
+                                    <h6 class="time">4hr</h6>
+                                    <p class="briefing">
+                                        <a href="#">Foreign affairs ministry to facilitate return, reintegration of Ghanaians deportees from US</a>
+                                    </p>
+                                </div>
+
+                                <div class="latests-news-box">
+                                    <h6 class="time">5hr</h6>
+                                    <p class="briefing">
+                                        <a href="#">Accra is a mess because of NPP annd NDC - Former NPP MP</a>
+                                    </p>
+                                </div>
+                                
+                                <div class="latests-news-box">
+                                    <h6 class="time">5hr</h6>
+                                    <p class="briefing">
+                                        <a href="#">
+                                            GhanaWeb to stream Kwahu Business Forum as government targets 600
+                                        </a>
+                                    </p>
+                                </div>
+
+                                <div class="latests-news-box">
+                                    <h6 class="time">6hr</h6>
+                                    <p class="briefing">
+                                        <a href="#">
+                                            Odumase Circuit Court jails 'okada' rider 10 years for trafficking Nigerian women
+                                        </a>
+                                    </p>
+                                </div>
+
+                                <div class="latests-news-box">
+                                    <h6 class="time">6hr</h6>
+                                    <p class="briefing">
+                                        <a href="#">
+                                            5 key reforms introduced by CJ Torkornoo since she assumed office in 2023
+                                        </a>
+                                    </p>
+                                </div>
+
+                                <div class="latests-news-box">
+                                    <h6 class="time">7hr</h6>
+                                    <p class="briefing">
+                                        <a href="#">
+                                            President Mahama appoints Professor Owusu-Ansah as Lands Commission boss
+                                        </a>
+                                    </p>
+                                </div>
+
+                                <div class="latests-news-box">
+                                    <h6 class="time">10hr</h6>
+                                    <p class="briefing">
+                                        <a href="#">Whether you burn down our equipment or not, we'll still do Galamsey - illegal miners reacts after soldiers raid</a>
+                                    </p>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+
+
+
+                    </div>
+               
+                </div> 
+                
+                
+                <!------------SIDE PANEL-------------->
+
+                <div class="side-panel">
+                    <div class="side-panel-container">
+
+                        <div class="side-box1">
+                            <a href="#" class="side-box-content">
+                                
+                                <img src="./images/NEWS/side-box1.jpg"  alt="">
+
+                                <div class="side-box-text">
+                                    <p>
+                                        Did NIB err in attempt to arrest the MP Ntim Fordjour?
+                                    </p>
+                                </div>
+                            </a>
+                            <p class="side-span">spotlight</p>
+                        </div>
+
+                        <div class="side-box2">
+                            <a href="#" class="side-box-content">
+                                <img src="./images/NEWS/Ato Forson.jpg" alt="">
+
+                                <div class="side-box-text">
+                                    <p>
+                                        Trump announces 90-day pause on 'reciprocal' tariffs with
+                                        exception of China.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="side-box3">
+                            <a href="#" class="side-box-content">
+                                <img src="./images/NEWS/bossom.jpg" alt="">
+
+                                <div class="side-box-text">
+                                    <p>
+                                        Just say you  don't like my music Bossom Piyong to critics
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="side-box4">
+
+                            <a class="side-box-content">
+                                <img src="./images/NEWS/sark-suit.jpg" alt="">
+
+                                <div class="side-box-text">
+                                    <p>
+                                        Ecobank look - alike suit: Do you think sarkodie have a case?
+                                    </p>
+                                </div>
+                            </a>
+
+                        </div>
+
+                        <div class="side-box5">
+                            <a href="#" class="side-box-content">
+                                <img src="./images/childrape.jpg" alt="">
+
+                                <div class="side-box-text">
+                                    <p>
+                                        Child was raped every half an hour' in two months in eastern
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="side-box6">
+                            <a href="#" class="side-box-content">
+                                <img src="./images/bbcpidgin.jpg" alt="">
+
+                                <div class="side-box-text-bbc">
+                                Child was raped every half an hour' in two months in eastern
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="side-box7">
+                            <a href="#" class="side-box-content">
+                                <img src="./images/NEWS/chinese.jpg" alt="">
+
+                                <div class="side-box-text">
+                                Chinese zijin mining buys Newmont's Akyem gold mine for $1 billion
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="side-box8">
+                            <a href="#" class="side-box-content">
+                                <img src="./images/NEWS/ksm.jpg" alt="">
+
+                                <div class="side-box-text">
+                                Finally, important things are on the table - KSM lauds Mahama over initiatives
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="side-box9">
+                            <a href="#" class="side-box-content">
+                                <img src="./images/NEWS/vat.jpg" alt="">
+
+                                <div class="side-box-text">
+                                A proposed shift from VAT sales Tax: Ghana embracing the poser of sales taxes
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="side-box10">
+                            <a href="#" class="side-box-content-banner">
+                                <img src="./images/NEWS/ad.jpg" alt="">
+                            </a>
+                        </div>
+
+                        <div class="side-box10">
+                            <a href="#" class="side-box-content-banner">
+                                <img src="./images/NEWS/people_n_places_new.jpg" alt="">
+                            </a>
+                        </div>
+
+                        <div class="side-box10">
+                            <a href="#" class="side-box-content-banner">
+                                <img src="./images/NEWS/lowdown_new.jpg" alt="">
+                            </a>
+                        </div>
+
+                    </div>
+
+                
+                </div>
+
+            
+        
+            </div>
+        </section>
+        
+        
+        <!--------FOOTER SECTION---------->
+        <div class="footer-section">
+            <div class="footer-container">
+                <div class="upper-container">
+                    <div class="footer-line"></div>
+        
+                    <div class="footer-logo">
+                        <a href="Home.html" class="logo-link">
+                            <img src="./images/logo2.png" class="logo-image" alt="logo-image">
+                        </a>
+                    </div>
+
+                    <div class="footer-line"></div>
+                </div>
+        
+            
+                <div class="bottom-footer">
+
+                    <div class="navigation-links">
+                        <h4 class="footer-nav-links">Navigation Links</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Sports</a></li>
+                            <li><a href="#">Business</a></li>
+                            <li><a href="#">Entertainment</a-></li>
+                            <li><a href="#">GhanaWebTv</a></li>
+                            <li><a href="#">Africa</a></li>
+                            <li><a href="#">Say It Loud</a></li>
+                            <li><a href="#">Cartoon</a></li>
+                            <li><a href="#">Opinions </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="useful-links">
+                        <h4 class="footer-nav-links">Useful Links</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Advertising</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Site Map</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="apps">
+                        <h4 class="footer-nav-links">Download Our Apps</h4>
+                        <div class="download-apps">
+                            <img src="./images/app_play_store1.svg" class="playstore" alt="">
+                            <img src="./images/app_store1.svg" class="appstore" alt="">
+                        </div>
+                </div>
+                </div>
+                <div class="lower-footer-line"></div>
+
+                <div class="copyright">
+                    <p>Copyright &copy; 1994 - 2025 GhanaWeb. All Rights Reserved.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="./js/Index.js"></script>
+    </body> 
+</html>                 

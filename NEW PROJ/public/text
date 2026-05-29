@@ -1,0 +1,72 @@
+header
+.logo
+    img - logo-image
+    .logo-links as Home.html
+
+.Social-icons
+    facebook
+    instagram
+    twitter
+
+.search-box 
+    input
+    .search-button 
+    .clear-search
+
+.nav-links 
+    self service advert
+    site map
+    partners
+    about us
+
+    /*=========sign up==========*/
+Sign up form
+    .left-section:
+        # Hello, sign up to get started
+        # Terms and conditions
+       
+        The following terms and conditions apply if you want to submit content (articles, photos, adverts, etc.) to GhanaWeb:
+            . You are only allowed to submit content which you have created yourself.
+            . You are not allowed to upload photos from another person pretending    it is you.
+            . No nudity, pornography and any unlawful content is permitted.
+            . You grant GhanaWeb the right to publish and use your content.
+            . You allow GhanaWeb to communicate with you using the info you provide.
+            .GhanaWeb reserves the right to reject/remove your content without explanation.
+
+    .right-section:
+        h1 -> Register
+        surname,
+        other names,
+        email,
+        phone number with country,
+        select your date of birth, gender,
+        terms and conditions dropdown,
+           Do you accept the terms? checkbox,
+           reCAPTCHA,
+
+        By continuing, you agree to the Terms & Privacy Policy
+
+        sign up button
+
+        /*=========Login form==========*/
+    
+Sign In form
+left section:
+    Welcome , sign in to continue
+
+right section:
+    # New here? link -> create an account
+    # placeholder -> email, enter password
+    # link -> forgot password?
+    # reCAPTCHA
+    # sign in button
+
+
+Reset password form
+    # Already have an account? Sign In
+    # reCAPTCHA
+    # send reset code button
+
+reCAPTCHA
+    Site Key -> 6LdT1-YqAAAAAHuemiIVbpLF44Yql2Hx5fb4q_Bw
+    Secrete Key -> 6LdT1-YqAAAAAB70aQr6SZFaOfh4IzfqzFfzywwr

@@ -1,0 +1,152 @@
+header
+    .nav_logo, image item
+
+nav-link
+    Home, About Us, Popular, Products, contact
+
+-----------------HOME--------------------
+Home    
+    .home_title
+    Delicious And <br> Tasty Burger
+
+    .home_description
+    Order the best Burger with fries to satisfy your hunger
+     and create memorable moments with your family. Place your order now!
+
+    .button
+    Order Burger & Fries Now
+
+
+-------------------ABOUT-------------------
+
+    .section_title
+    Discover More About <br> Our History
+
+    .about_description
+    The key to success lies in using the finest ingredients to
+    create a superior burger. For the past 20 years, since opening
+     KingBurger in Accra, Ghana, we have consistently pursued perfection.
+
+     .button
+     The Best Burgers
+
+
+-------------------POPULAR------------------
+.popular
+    .section_popular
+    Discover <br> Popular Orders
+
+
+    .popular_description
+    Choose from the best-prepared and most delicious
+    flavors with popular recipes from around the world.
+
+    .popular_title
+    Deluxe
+    Big King
+
+
+-------------------RECIPE------------------    
+
+    .section_title
+    Fresh and <br> Natural Ingredients
+
+    .recipe_name .recipe_description
+
+    1. Ground beef 
+        providing a hearty and satisfying protein source
+
+    2. Sesame seed hamburger buns
+        They provide a delightful crunch and nutty flavor 
+        that complements the savory ingredients of a burger.
+
+    3. American cheese
+         American cheese adds richness and a comforting element to the dish.
+
+    4. Lettuce 
+        vitamins A and K, as well as folate, which are important for
+         vision, blood clotting, and overall health
+
+    5. Tomato 
+        vitamins C and K, potassium, and folate, contributing to
+         overall health and immune function.
+
+    6. Onions 
+        vitamins C and B6, manganese, and dietary fiber, contributing 
+        to digestive health and overall nutrition
+
+
+--------------------PRODUCTS--------------------------
+
+    .section_title
+        Our Authentic <br> Menu
+
+    .products_name .products_price 
+        Deluxe
+        Sandwich Only    Combo
+        ₵ 36              ₵44
+
+        Whopper
+        Sandwich Only    Combo
+        ₵ 32             ₵ 45
+
+        Big King XL
+        Sandwich Only    Combo
+        ₵ 44             ₵ 56
+
+        Double Cheese Burger
+        Sandwich Only     Combo Meal
+        ₵ 32              ₵ 26
+
+        Tendergrilled Chicken
+        Sandwich Only     Combo Meal
+        ₵ 34              ₵ 42
+        
+
+--------------------CONTACT--------------------------
+
+    .section_title
+        Contact Now
+
+    .contact_title .contact_address
+        Write Us
+        https://api.whatsapp.com/send?phone=233541611252&text=Hello, More Information
+        https://i.me/instagram
+        https://f.me/facebook
+    
+    Delivery
+    +233541611252
+
+    Location
+    Accra Mall
+    Palace Mall-Spintext rd, Accra
+    Shell Airport
+
+    map
+    https://www.google.com/maps/place/Burger+King+Shell+Airport/@5.6036781,-0.1777228,17z/data=!3m1!4b1!4m6!3m5!1s0xfdf9b8f87e01dab:0x7f075dbecdc71c52!8m2!3d5.6036728!4d-0.1751479!16s%2Fg%2F11flwdn4tq?entry=ttu&g_ep=EgoyMDI1MDIwMy4wIKXMDSoJLDEwMjExMjM0SAFQAw%3D%3D
+
+    View On Map
+
+
+    -----------------------FOOTER-------------------
+    .footer_logo
+    Burger
+
+    .footer_title
+    social
+    https://www.facebook.com/
+    https://www.instagram.com/
+    https://www.X.com/
+
+    Payment Methods
+
+    Subscribe for Discount
+    Email
+    Subscribe
+
+    .footer_policy
+    Terms & Agreements
+    Private Policy
+
+    .footer_copy
+    &#150, All Rights Reserved By Bee 

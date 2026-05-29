@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+    
+        <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+        
+        <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    
+        <link rel="stylesheet" href="../css/styles.css">
+        <title>GhanaHomePage</title>
+    </head>
+
+
+    <body>
+        <header>
+            <div class="container" id="container">
+                <div class="logo">
+                    <a href="../Home.html" class="logo-link">
+                        <img src="../images/ghanaweb.png" class="logo-image" alt="logo-image">
+                    </a>
+                </div>
+    
+                <div class="mobile-icons" id="mobileIcons">
+                    <i class="ri-search-line mobile-search-icon" id="mobileSearchIcon"></i>
+    
+                    <i class="ri-user-3-line mobile-user" id="mobileUser"></i>
+    
+                    <i class="ri-menu-line mobile-menu" id="mobileMenu"></i>
+                </div>
+    
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook social-btns"></i></a>
+                    <a href="#"><i class="fab fa-instagram social-btns"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter social-btns"></i></a>
+                </div>
+    
+                <div class="search-box">
+                    <form>
+                        <input type="search" name="search" id="search" placeholder="Search">
+                        <div class="search-icons">
+                            <button type="submit"><i class='bx bx-search'></i></button>
+                            <i class="fas fa-times clear-search" id="clearSearch"></i>
+                        </div>
+                    </form>
+                </div>
+                
+        
+                <nav class="nav-links" id="navLinks">
+                    <ul class="nav-lists">
+                        <li><a href="#">Self Service Advert</a></li>
+                        <li><a href="#">Site Map</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+    
+                    <!-----Close Mobile Menu------>
+    
+                    <div class="mobile-menu-close" id="mobileMenuClose">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </nav>
+        
+    
+                <div class="login-signup-btns">
+                    <div id="registerModalContainer">
+                        <a href="#" class="signUp signup-btn" id="openRegister">Sign Up</a>
+                    </div>
+    
+                    <div class="loginModalContainer">
+                        <a href="#" class="logIn login-btn" id="openLogin">Login</a>
+                    </div>
+                </div>
+                
+                <!-----------Register modal------------>
+    
+                <div class="modal-overlay" id="registerModalOverlay"></div>
+    
+                    <div class="register-container modal" id="register-section">
+                      
+                        <div class="register-left-panel">
+                            <div class="register-greeting">
+                                <h1>Welcome!</h1>
+                                <p>Create an account to get started</p>
+                            </div>
+                            <div class="register-terms">
+                                <h4>Terms and Conditions</h4>
+                                <ul>
+                                    <li>You are only allowed to submit content that you have created yourself.</li>
+                                    <li>You are not allowed to upload photos pretending to be someone else.</li>
+                                    <li>No nudity, pornography, or unlawful content is permitted.</li>
+                                    <li>You grant GhanaWeb the right to publish and use your content.</li>
+                                    <li>GhanaWeb reserves the right to reject/remove your content without explanation.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                        <div class="register-right-panel">
+                            <i class='bx bx-x-circle close-register' id="closeRegister"></i>
+                            <h2>REGISTER</h2>
+                            <p>Already have an account? <a href="#" id="desktopLogin">Sign in</a></p>
+                    
+                            <form class="register-inputs" id="desktopRegisterForm">
+                                <div class="register-grid">
+                                    <div class="field-group">
+                                        <label for="reg-surname">Surname</label>
+                                        <input type="text" name="surname" id="reg-surname" required>
+                                    </div>
+                    
+                                    <div class="field-group">
+                                        <label for="reg-other-names">Other names</label>
+                                        <input type="text" name="other-names" id="reg-other-names" required>
+                                    </div>
+                    
+                                    <div class="field-group">
+                                        <label for="reg-email">Email</label>
+                                        <input type="email" name="email" id="reg-email" required>
+                                    </div>
+
+                                    <div class="field-group">
+                                        <label for="reg-password">Password</label>
+                                        <input type="password" name="password" id="reg-password" required>
+                                    </div>
+                    
+                                    <div class="field-group">
+                                        <label for="phone">Phone</label>
+                                        <input type="tel" id="phone" name="phone">
+                                    </div>
+                    
+                                    <div class="field-group">
+                                        <label for="reg-dob">Date of Birth</label>
+                                        <input type="date" id="reg-dob" name="dob" required>
+                                    </div>
+                    
+                                    <div class="field-group">
+                                        <label for="reg-gender">Gender</label>
+                                        <select id="reg-gender" name="gender" required>
+                                            <option value="">Select option</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+                    
+                                <div class="field-group">
+                                    <label for="reg-terms">Do you accept the terms?</label>
+                                    <select id="reg-terms" name='terms' required>
+                                        <option value="">No, I reject the terms</option>
+                                        <option value="yes">Yes, I accept the terms</option>
+                                    </select>
+                                </div>
+                                
+                    
+                                <div class="mobile-field-group">
+                                    <div class="terms-policy">  
+                                        <input type="checkbox" id="reg-terms-checkbox" name="termsCheckbox" required>
+                                        <label for="reg-terms-checkbox" class="mobile-policy">
+                                        By continuing, you agree to the Terms & Privacy Policy
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="field-group">
+                                    <button type="submit" class="register-btn" type="submit">Sign Up</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                
+    
+                <!-----------Login  modal------------>
+    
+                    <div class="modal-overlay" id="modalOverlay"></div>
+                    <div class="login-container modal" id="login-section">
+                        <div class="login-left-panel">
+                            <h1>Welcome Back!</h1>
+                            <p>Sign in to continue</p>
+                        </div>
+                    
+                        <div class="login-right-panel">
+                            <i class='bx bx-x-circle close-login' id="closeLogin"></i>
+                            <h2>LOG IN</h2>
+                            <p>New here? <a href="#" id="desktopRegister">Create an account</a></p>
+                    
+                            <form action="" id="desktopLoginForm">
+                                <div class="field-wrapper">
+                                    <input type="text" name="user-email" id="user-email" placeholder="Email" required>
+                                    <i class='bx bxs-envelope login-icon'></i>
+                                </div>
+                                
+                                <div class="field-wrapper">
+                                    <input type="password" name="user-password" id="user-password" placeholder="Password" required>
+                                    <i class="fa-solid fa-eye login-icon"></i>
+                                </div>
+                    
+                                <div class="field-wrapper">
+                                    <a href="#" class="forgot-password">Forgot password?</a>
+                                </div>
+                    
+                                <div class="field-wrapper">
+                                    <button class="login-btn" type="submit">Sign in</button>
+                                </div>
+
+                            </form>
+
+                            <div class="field-wrapper">
+                                <a href="#" id="logoutBtn" style="display: none;">
+                                    Logout
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                            
+            </div>
+        </header>
+
+        <!------MOBILE SEARCH DEVICE------->
+
+        <div class="mobile-search" id="mobileSearch">
+       
+
+            <form action="" class="search-form">
+                <i class="ri-search-line search-icon"></i>
+
+                <input type="search" class="search-input" id="searchInput" placeholder="search here">
+                <p>hbsdhjnmbsj</p>
+            </form>
+
+            <i class="ri-close-line search-close" id="searchClose"></i>
+        </div>
+
+    
+        <!-----------MOBILE REGISTER DEVICE--------------->            
+        <div class="mobile-register-container mobile-modal" id="mobileRegisterSection">
+      
+            <div class="mobile-register-form" id="mobileRegisterWrapper">
+                <div class="register-top-panel">
+
+                    <div class="mobile-register-greeting">
+                        <h1>Hello,</h1>
+                        <p>Sign Up to get started</p>
+                    </div>
+
+                    <div class="mobile-register-terms">
+                        <h4>Terms and Conditions</h4>
+                    </div>
+
+                </div>
+    
+                <div class="register-bottom-panel">
+
+                    <h2 class="mobile-h2">REGISTER</h2>
+                    <p class="mobile-p">
+                        Already have an account? <a href="#" id="mobileGoToLogin">Sign in</a>
+                    </p>
+                    
+                    
+    
+                    <form action="" class="register-inputs" id="mobileRegisterForm">
+                        <div class="mobile-register-grid">
+
+                            <div class="mobile-field-group">
+                                <label for="reg-surname">Surname</label>
+                                <input type="text" name="surname" id="mobile-reg-surname" required>
+                            </div>
+    
+                            <div class="mobile-field-group">
+                                <label for="reg-other-names">Other names</label>
+                                <input type="text" name="other-names" id="mobile-reg-other-names" required>
+                            </div>
+    
+                            <div class="mobile-field-group">
+                                <label for="reg-email">Email</label>
+                                <input type="email" name="email" id="mobile-reg-email" autocomplete="none" required>
+                            </div>
+
+                            <div class="mobile-field-group">
+                                <label for="reg-password">Password</label>
+                                <input type="password" name="password" id="mobile-reg-password" required>
+                                <!--<i class="fa-solid fa-eye mobile-login-icon"></i>-->
+                            </div>
+    
+                            <div class="mobile-field-group">
+                                <label for="reg-phone">Phone</label>
+                                <input type="tel" id="mobile-phone" name="phone">
+                            </div>
+    
+                            <div class="mobile-field-group">
+                                <label for="reg-dob">Date of Birth</label>
+                                <input type="date" id="mobile-reg-dob" name="dob" required>
+                            </div>
+    
+                            <div class="mobile-field-group">
+                                <label for="reg-gender">Gender</label>
+
+                                <select id="mobile-reg-gender" name="gender" required>
+                                    <option value="">Select option</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+
+                        </div>
+    
+                        <div class="mobile-field-group">
+                            <label for="mobile-reg-terms">Do you accept the terms?</label>
+                            <select id="mobile-reg-terms" name="terms" required>
+                                <option value="">No, I reject the terms</option>
+                                <option value="yes">Yes, I accept the terms</option>
+                            </select>
+                        </div>
+    
+                        <div class="mobile-field-group">
+                            <div class="terms-policy">  
+                                <input type="checkbox" id="reg-terms-checkbox" name="termsCheckbox" required>
+                                <label for="reg-terms-checkbox" class="mobile-policy">
+                                By continuing, you agree to the Terms & Privacy Policy
+                                </label>
+                            </div>
+                        </div>
+                          
+
+                        <div class="mobile-field-group">
+                            <button type="submit" class="mobile-register-btn" type="submit">Sign Up</button>
+                        </div>
+                    
+
+                    </form>
+
+                </div>
+            </div>
+
+            <i class='bx bx-x-circle mobile-close-register' id="mobileCloseRegister"></i>
+
+        </div>
+
+
+    
+        <!--------MOBILE LOGIN DEVICE--------->
+
+
+        <div class="mobile-login-container mobile-modal" id="mobileLoginSection">
+    
+            <div class="mobile-login-form">
+    
+                <div class="login-top-panel">
+                    <h1>Welcome,</h1>
+                    <p>Sign in to continue</p>
+                </div>
+          
+                <div class="login-bottom-panel">
+                    
+                    <h2 class="mobile-h2">SIGN IN</h2>
+                    <p class="mobile-p">New here? <a href="#" id="mobileGoToRegister">Create an account</a></p>
+          
+                        <form action="" id="mobileLoginForm">
+                            <div class="mobile-field-wrapper">
+                                <input type="text" name="user-email" id="user-email" placeholder="Email" required>
+                                <i class='bx bxs-envelope mobile-login-icon'></i>
+                            </div>
+                      
+                            <div class="mobile-field-wrapper">
+                                <input type="password" name="user-password" id="user-password" placeholder="Password" required>
+                                <i class="fa-solid fa-eye mobile-login-icon"></i>
+                            </div>
+          
+                            <div class="mobile-field-wrapper">
+                                <a href="#" class="forgot-password">Forgot password?</a>
+                            </div>
+          
+                            <div class="mobile-field-wrapper">
+                                <button class="mobile-login-btn" type="submit">Sign in</button>
+                            </div>
+
+                           
+                        </form>
+
+                         <!----LOGOUT BUTTON----->
+                         <div class="field-wrapper">
+                            <a href="#" id="logoutBtn" style="display: none;">
+                                Logout
+                            </a>
+                        </div>
+                </div>
+            </div>   
+            <i class='bx bx-x-circle mobile-close-login' id="mobileCloseLogin"></i> 
+        </div>
+
+    
+
+
+        <!---------- SWIPER------------>
+
+        <div class="swiper mySwipper" id="swiperContainer">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img src="../images/Entertain/met-gala.webp" alt="Slide" class="slide-image">
+                    <div class="image_data">
+                        <a href="#" class="text">met gala 2025 guest list: Met Gala 2025 date, theme, guest list, place, location, co chairs | All about</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="../images/Entertain/promise.webp" style="object-position: center top;" alt="Slide" class="slide-image">
+                    <div class="image_data">
+                        <a href="#" class="text">TGMA 2025: King Promise wins Artist of the year</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="../images/Entertain/maxresdefault.jpg" alt="Slide" style="object-position: top 5%;" class="slide-image">
+                    <div class="image_data">
+                        <a href="#" class="text">Fashion in Ghana: Top lucrative events - Green Views Residential Project</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="../images/Entertain/gettyimages-2151812933.jpg" style="object-position: center top;" alt="Slide" class="slide-image">
+                    <div class="image_data">
+                        <a href="#" class="text">Met Gala 2025: Theme, guest list and everything you need to know | CNN</a>
+                    </div>
+                </div>
+
+                
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next nav-btn"></div>
+            <div class="swiper-button-prev nav-btn"></div>
+       
+
+       
+        </div>
+
+        <!--------------------OTHER LINKS----------------->
+
+        <!-- Swiper Container -->
+        <!-- Swiper Container -->
+        <div class="swiper link-swiper-container" id="mySwiperLink">
+            <div class="swiper-wrapper link-swiper-wrapper">
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="../Home.html" class="thin-bg-link home-link">Home</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="../news.html" class="thin-bg-link news-link">News</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="../sports.html" class="thin-bg-link sports-link">Sports</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="../Business.html" class="thin-bg-link business-link">Business</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="../Entertainment.html" class="thin-bg-link entertainment-link">Entertainment</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="../Africa.html" class="thin-bg-link africa-link">Africa</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="../GhanaWebTV.html" class="thin-bg-link ghanawebtv-link">GhanaWebTV</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="../opinions.html" class="thin-bg-link opinions-link">Opinions</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="../cartoons.html" class="thin-bg-link cartoons-link">Cartoons</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="../SayItLoud.html" class="thin-bg-link sayitloud-link">Say It Loud</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="../Country.html" class="thin-bg-link country-link">Country</a>
+              </div>
+          
+            </div>
+        </div>      
+
+
+        <!-----------------NEWS CLICKED-------------------->
+
+        <section class="news-section">
+            <div class="news-top-layer">
+                <div class="news-top-layer-style">
+                    News
+                </div>
+
+                <div class="country-top-layer-links">
+                    <a href="#">Home-News</a>
+                    <a href="#">Election 2024</a>
+                    <a href="#">Twi News | Tv</a>
+                    <a href="">Polls</a>
+                    <a href="news.html">Press Release</a>
+                    <a href="News.html">News Blogs</a>
+                    <a href="">News Archive</a>
+                    <a href="#">Crime and Punishment</a>
+                    <a href="#">Politics</a>
+
+                    <div class="country-dropdown-container">
+                        <a href="#" class="country-dropdown-toggle">
+                            More <span class="triangle">&#9662;</span>
+                        </a>
+
+                        <div class="country-dropdown-menu">
+                            <a href="#">Regional</a>
+                            <a href="#">Editorial</a>
+                            <a href="#">Health</a>
+                            <a href="#">Ghanaians Abroad</a>
+                            <a href="#">Tabloid</a>
+                            <a href="#">Africa</a>
+                            <a href="#">Religion</a>
+                            <a href="#">Corona Virus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-second-link-layer">
+
+                <div class="news-link-container">
+
+                    <div class="news-header-wrapper">
+
+                        <div class="news-header-box">
+                            <div class="news-header-date">
+                                <p>Africa news of Friday, 23 May, 2025</p>
+                            </div>
+
+                            <div class="news-header-blogger">
+                                <p><em>Source:</em> ghanaweb</p>
+                            </div>
+                        </div>  
+
+                        <div class="news-links-icons">
+
+                            <div class="news-links-click">
+                                <a href="#">&lt;&lt;prev |</a> 
+                                <a href="#">next&lt;&lt; |</a> 
+                                <a href="#">Comment |</a> 
+                                <a href="#">
+                                    <i class="fa-solid fa-headphones"></i>
+                                    Listen to Article
+                                </a>
+                            </div>
+
+                            <div class="news-social-icons">
+                                <p>Share:</p>
+                                <i class="fa-brands fa-whatsapp whatsapp"></i>
+                                <i class="fa-brands fa-facebook-f facebook"></i>
+                               <i class="fa-brands fa-x-twitter twitter"></i>
+
+                            </div>
+                        </div>
+
+                        <h2 class="news-link-container-header">
+                            Your're doing the same things that ruin NPP - Barker Varmawor cautions NDC
+                        </h2>
+
+                         <div class="news-wrapper-grid">
+
+                            <div class="wrapper-grid-box">
+
+                                <div class="wrapper-grid-content">
+                                    <img src="../images/15351127.jpg" alt="">
+
+                                    <p>Oliver Barker - Varmawor is a  social activist</p>
+                                </div>
+
+                                <div class="wrapper-grid-content">
+                                    <img src="../images/NEWS/4460531090895341508.jpeg" alt="">
+                                </div>
+
+                            </div>  
+                            
+                            <div class="wrapper-grid-text">
+                                Private legal practitioner and social activist Oliver Barker-Vormawor has issued a caution to the ruling <a target="_blank" class="special-names" href="/GhanaHomePage/people/person.php?ID=3181">National Democratic Congress</a>  (NDC), warning that certain actions by the party could erode public goodwill and negatively impact their electoral prospects in the 2028 elections.
+                                <br> <br>
+                                
+                                Oliver Barker-Vormawor expressed the view that the recent arrest of <a target="_blank" class="special-names" href="/GhanaHomePage/people/person.php?ID=3187">New Patriotic Party</a>  (NPP) member Alfred Ababio Kumi was unnecessary, describing it as an act of “overzealous policing.” 
+                                <br> <br>
+                                
+                                He argued that Kumi’s actions prior to his arrest appeared to be mere attempts to distract the ruling government. 
+                                <br> <br>
+                                
+                                “This feels like the umpteenth time I have to rebuke the NDC about the risk of overzealous policing. If you keep getting distracted by Ababio Kumi's. If every person coughs wrong and you feel the need to send in 20 security officers to arrest them, you will be led down a path of no return,” he posted on Facebook on Saturday, May 24, 2025.
+                                <br> <br>
+                                
+                                Barker-Vormawor further cautioned that the government seems to be following a similar path as their predecessors, actions which he noted, ultimately contributed to their loss of power.
+                                <br> <br>
+                                
+                                “This is the same stupid path that ruined the NPP. Beware! Beware! Beware!,’ he cautioned.
+                                <br> <br>
+                                
+                                According to him, he will only support arrests that are directly linked to Operation Recover All Loot (ORAL), an initiative aimed at retrieving stolen public funds. 
+                                <br> <br>
+                                
+                                He emphasised that he does not endorse arrests made merely to teach people a lesson as a response to propaganda or political criticism.
+                                <br> <br>
+                                
+                                “I will support the Government when it makes ORAL arrests. But if someone engages in unnecessary propaganda and you feel the need to show them where power lies. Listen, that power will leave you. We have all seen it happen! Stop chasing nkwasiakeka and focus on the thieves,” he said.
+                                <br> <br>
+                                
+                                Barker-Vormawor advised the government to remain focused on its core mandate and avoid falling prey to distractive tactics that could derail its agenda and potentially contribute to its downfall.
+                                <br> <br>
+                                
+                                His comments come in the wake of the arrest of Alfred Ababio Kumi, a former NPP parliamentary aspirant, by state security operatives at his residence on Friday, May 23, 2025. Kumi has since been granted bail and charged with the publication of false news.
+                                <br> <br> 
+                                
+                                
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                   <!------side panel------->
+
+                   <div class="news-link-side-panel">
+
+                        <div class="news-link-content">
+                            <img src="../images/" alt="">
+                        </div>
+
+                        <div class="news-link-content">
+                            <img src="../images/Opinion/side1.jpeg" alt="">
+                        </div>
+
+                        <a class="news-link-content1">
+                            <div class="link-content-box1">
+                                <h6>news</h6>
+                                <img src="../images/Opinion/news.jpg" alt="">
+
+                                <p>From classrooms to Politics: UG professors who have gained</p>
+                            </div>
+                        </a>
+
+                        <a class="news-link-content1">
+                            <div class="link-content-box2">
+                                <h6>sports</h6>
+                                <img src="../images/Opinion/kudus.jpg" alt="">
+
+                                <p>Kudus injury, Quarter final exit: Prophet reveal how Black Stars will fare at the </p>
+                            </div>
+                        </a>
+
+                        
+                        <a class="news-link-content1">
+                            <div class="link-content-box3">
+                                <h6>Business</h6>
+                                <img src="../images/Opinion/binez.jpg" alt="">
+
+                                <p>Government to hand over ECG power distribution, revenue collection to private sector</p>
+                            </div>
+                        </a>
+
+                        <a class="news-link-content1">
+                            <div class="link-content-box4">
+                                <h6>Business</h6>
+                                <img src="../images/Business/biz.jpg" alt="">
+
+                                <p>All 16 relief outlined by Torkonoo Chief Justice in suit contesting her removal</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>    
+
+            </div>
+        </section>
+
+
+       <!--------FOOTER SECTION---------->
+          <div class="footer-section">
+            <div class="footer-container">
+                <div class="upper-container">
+                    <div class="footer-line"></div>
+        
+                    <div class="footer-logo">
+                        <a href="../Home.html" class="logo-link">
+                            <img src="../images/logo2.png" class="logo-image" alt="logo-image">
+                        </a>
+                    </div>
+
+                    <div class="footer-line"></div>
+                </div>
+        
+            
+                <div class="bottom-footer">
+
+                    <div class="navigation-links">
+                        <h4 class="footer-nav-links">Navigation Links</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Sports</a></li>
+                            <li><a href="#">Business</a></li>
+                            <li><a href="#">Entertainment</a-></li>
+                            <li><a href="#">GhanaWebTv</a></li>
+                            <li><a href="#">Africa</a></li>
+                            <li><a href="#">Say It Loud</a></li>
+                            <li><a href="#">Cartoon</a></li>
+                            <li><a href="#">Opinions </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="useful-links">
+                        <h4 class="footer-nav-links">Useful Links</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Advertising</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Site Map</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="apps">
+                        <h4 class="footer-nav-links">Download Our Apps</h4>
+                        <div class="download-apps">
+                            <img src="../images/app_play_store1.svg" class="playstore" alt="">
+                            <img src="../images/app_store1.svg" class="appstore" alt="">
+                        </div>
+                </div>
+                </div>
+                <div class="lower-footer-line"></div>
+
+                <div class="copyright">
+                    <p>Copyright &copy; 1994 - 2025 GhanaWeb. All Rights Reserved.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <script src="../js/Index.js"></script>
+    </body> 
+</html>                 

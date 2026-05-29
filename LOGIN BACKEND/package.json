@@ -1,0 +1,21 @@
+{
+  "name": "public",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "server.js"
+  },
+  "author": "Bee",
+  "license": "ISC",
+  "description": "backend project practice",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2",
+    "express.js": "^1.0.0",
+    "knex": "^3.1.0",
+    "nodemon": "^3.1.9",
+    "pg": "^8.13.3"
+  }
+}

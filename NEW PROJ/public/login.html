@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+        <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+        
+        <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    
+        <link rel="stylesheet" href="./css/styles.css">
+        <title>GhanaHomePage</title>
+    </head>
+<body>
+    <header>
+        <div class="container" id="container">
+            <div class="logo">
+                <a href="Home.html" class="logo-link">
+                    <img src="./images/ghanaweb.png" class="logo-image" alt="logo-image">
+                </a>
+            </div>
+            <div class="mobile-icons" id="mobileIcons">
+                <i class="ri-search-line mobile-search-icon" id="mobileSearchIcon"></i>
+
+                <i class="ri-user-3-line mobile-user" id="mobileUser"></i>
+
+                <i class="ri-menu-line mobile-menu" id="mobileMenu"></i>
+            </div>
+
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook social-btns"></i></a>
+                <a href="#"><i class="fab fa-instagram social-btns"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter social-btns"></i></a>
+            </div>
+
+            <div class="search-box">
+                <form action="">
+                    <input type="search" name="search" id="search" placeholder="Search">
+                    <div class="search-icons">
+                        <button type="submit"><i class='bx bx-search'></i></button>
+                        <i class="fas fa-times clear-search" id="clearSearch"></i>
+                    </div>
+                </form>
+            </div>
+
+            <nav class="nav-links" id="navLinks">
+                <ul class="nav-lists">
+                    <li><a href="#">Self Service Advert</a></li>
+                    <li><a href="#">Site Map</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+
+                <!-----Close Mobile Menu------>
+
+                <div class="mobile-menu-close" id="mobileMenuClose">
+                    <i class="ri-close-line"></i>
+                </div>
+            </nav>
+
+
+            <!-----------Register modal------------>
+    
+            <div class="modal-overlay" id="registerModalOverlay"></div>
+    
+            <div class="register-container modal" id="register-section">
+              
+                <div class="register-left-panel">
+                    <div class="register-greeting">
+                        <h1>Welcome!</h1>
+                        <p>Create an account to get started</p>
+                    </div>
+                    <div class="register-terms">
+                        <h4>Terms and Conditions</h4>
+                        <ul>
+                            <li>You are only allowed to submit content that you have created yourself.</li>
+                            <li>You are not allowed to upload photos pretending to be someone else.</li>
+                            <li>No nudity, pornography, or unlawful content is permitted.</li>
+                            <li>You grant GhanaWeb the right to publish and use your content.</li>
+                            <li>GhanaWeb reserves the right to reject/remove your content without explanation.</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="register-right-panel">
+                    <i class='bx bx-x-circle close-register' id="closeRegister"></i>
+                    <h2>REGISTER</h2>
+                    <p>Already have an account? <a href="./login.html">Sign in</a></p>
+            
+                    <form class="register-inputs" id="desktopRegisterForm">
+                        <div class="register-grid">
+                            <div class="field-group">
+                                <label for="reg-surname">Surname</label>
+                                <input type="text" name="surname" id="reg-surname" required>
+                            </div>
+            
+                            <div class="field-group">
+                                <label for="reg-other-names">Other names</label>
+                                <input type="text" name="other-names" id="reg-other-names" required>
+                            </div>
+            
+                            <div class="field-group">
+                                <label for="reg-email">Email</label>
+                                <input type="email" name="email" id="reg-email" required>
+                            </div>
+            
+                            <div class="field-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+            
+                            <div class="field-group">
+                                <label for="reg-dob">Date of Birth</label>
+                                <input type="date" id="reg-dob" name="dob" required>
+                            </div>
+            
+                            <div class="field-group">
+                                <label for="reg-gender">Gender</label>
+                                <select id="reg-gender" name="gender" required>
+                                    <option value="">Select option</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+            
+                        <div class="field-group">
+                            <label for="reg-terms">Do you accept the terms?</label>
+                            <select id="reg-terms" name ='terms' required>
+                                <option value="">No, I reject the terms</option>
+                                <option value="yes">Yes, I accept the terms</option>
+                            </select>
+                        </div>
+            
+                        <span class="policy">By continuing, you agree to the Terms & Privacy Policy</span>
+                        <div class="field-group">
+                            <button type="submit" class="register-btn">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        
+
+        <!-----------Login  modal------------>
+
+            <div class="modal-overlay" id="modalOverlay"></div>
+            <div class="login-container modal" id="login-section">
+                <div class="login-left-panel">
+                    <h1>Welcome Back!</h1>
+                    <p>Sign in to continue</p>
+                </div>
+            
+                <div class="login-right-panel">
+                    <i class='bx bx-x-circle close-login' id="closeLogin"></i>
+                    <h2>LOG IN</h2>
+                    <p>New here? <a href="#">Create an account</a></p>
+            
+                    <form action="">
+                        <div class="field-wrapper">
+                            <input type="text" name="user-email" id="user-email" placeholder="Email" required>
+                            <i class='bx bxs-envelope login-icon'></i>
+                        </div>
+                        
+                        <div class="field-wrapper">
+                            <input type="password" name="user-password" id="user-password" placeholder="Password" required>
+                            <i class="fa-solid fa-eye login-icon"></i>
+                        </div>
+            
+                        <div class="field-wrapper">
+                            <a href="#" class="forgot-password">Forgot password?</a>
+                        </div>
+            
+                        <div class="field-wrapper">
+                            <button class="login-btn">Sign in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        
+
+        </div> 
+    </header>
+
+
+    <div class="mobile-login-container mobile-modal" id="mobileLoginSection">
+    
+        <div class="mobile-login-form">
+
+            <div class="login-top-panel">
+                <h1>Welcome,</h1>
+                <p>Sign in to continue</p>
+            </div>
+      
+            <div class="login-bottom-panel">
+                
+                <h2 class="mobile-h2">SIGN IN</h2>
+                <p class="mobile-p">New here? <a href="signup.html">Create an account</a></p>
+      
+                    <form action="">
+                        <div class="mobile-field-wrapper">
+                            <input type="text" name="user-email" id="user-email" placeholder="Email" required>
+                            <i class='bx bxs-envelope mobile-login-icon'></i>
+                        </div>
+                  
+                        <div class="mobile-field-wrapper">
+                            <input type="password" name="user-password" id="user-password" placeholder="Password" required>
+                            <i class="fa-solid fa-eye mobile-login-icon"></i>
+                        </div>
+      
+                        <div class="mobile-field-wrapper">
+                            <a href="#" class="forgot-password">Forgot password?</a>
+                        </div>
+      
+                        <div class="mobile-field-wrapper">
+                            <button class="mobile-login-btn">Sign in</button>
+                        </div>
+                    </form>
+            </div>
+        </div>   
+        <i class='bx bx-x-circle mobile-close-login' id="mobileCloseLogin"></i> 
+    </div>
+
+
+
+    <!---------- SWIPER------------>
+
+    <div class="swiper mySwiper" id="swiperContainer">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./images/prez arrival.jpg" alt="Slide" class="slide-image">
+                <div class="image_data">
+                    <a href="#" class="text"> 68th Independence Day </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="./images/IND-20.webp" alt="Slide" class="slide-image">
+                <div class="image_data">
+                   <a href="#" class="text"> Chiefs at 68th Independence Day </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="./images/Ghana-Parliament-budget.jpg" alt="Slide" class="slide-image">
+                <div class="image_data">
+                    <a href="#" class="text">Reading of the 2025 mini budget</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="./images/signal.jpg" alt="Slide" class="slide-image">
+                <div class="image_data">
+                    <a href="#" class="text">Independence Day at The Naval base </a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next nav-btn"></div>
+        <div class="swiper-button-prev nav-btn"></div>
+       
+
+       
+    </div>
+
+    <!--------------------OTHER LINKS---------------------->
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./js/Index.js"></script>
+
+</body>
+</html>

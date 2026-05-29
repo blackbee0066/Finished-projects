@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1de286;
+}
+
+.form {
+    width: 400px;
+    height: auto;
+    color: #fff;
+    font-family: tahoma;
+}
+
+.heading {
+    opacity: 0;
+    font-size: 40px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+input,
+.login-btn,
+.register-btn {
+    opacity: 0;
+    width: 80%;
+    height: 40px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    padding: 15px;
+    color: #fff;
+    
+    transition: .4s;
+}
+
+input::placeholder {
+    color: #fff;
+}
+
+input:focus,
+button:hover {
+    color: #000;
+    background: #fff;
+}
+
+input:focus::placeholder {
+    color: #000;
+}
+
+.login-btn,
+.register-btn {
+    width: auto;
+    padding: 0 20px;
+    margin: 50px auto 0;
+    cursor: pointer;
+}
+
+.link {
+    opacity: 0;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    margin: 30px auto;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.link:hover {
+    color: #fff;
+}
+
+.alert-box {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 150px;
+    max-width: 90%;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    text-transform: uppercase;
+    background: rgb(255, 199, 199);
+    border-top: 10px solid rgb(255, 37, 37);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #fff;
+    text-align: center;
+    font-family: tahoma;
+}

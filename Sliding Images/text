@@ -1,0 +1,27 @@
+subtitle
+we offer our customers the best
+
+title
+plant - just the right plant <br> for your decor
+
+The best plants for you
+Enjoy your discounted plants every black friday
+
+subtitle
+Honey suckle plants
+
+title
+Alluring with the best fragrance
+
+
+<div class="slide swiper-slide">
+                <img src="/Sliding Images/images/tree-736885_1280.jpg" class="image" alt="">
+
+                <div class="image_data">
+                    <span class="text">The best plants for you</span>
+
+                    <h2>Enjoy your discounted plants <br> every black friday</h2>
+
+                    <a href="#" class="button">About Us</a>
+                </div>
+            </div>

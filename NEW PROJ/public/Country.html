@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        
+
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+    
+        <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+        
+        <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+
+        
+        <link rel="stylesheet" href="./css/styles.css">
+        <title>GhanaHomePage</title>
+    </head>
+
+
+    <body>
+        <header>
+            <div class="container" id="container">
+                <div class="logo">
+                    <a href="Home.html" class="logo-link">
+                        <img src="./images/ghanaweb.png" class="logo-image" alt="logo-image">
+                    </a>
+                </div>
+    
+                <div class="mobile-icons" id="mobileIcons">
+                    <i class="ri-search-line mobile-search-icon" id="mobileSearchIcon"></i>
+    
+                    <i class="ri-user-3-line mobile-user" id="mobileUser"></i>
+    
+                    <i class="ri-menu-line mobile-menu" id="mobileMenu"></i>
+                </div>
+    
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook social-btns"></i></a>
+                    <a href="#"><i class="fab fa-instagram social-btns"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter social-btns"></i></a>
+                </div>
+    
+                <div class="search-box">
+                    <form>
+                        <input type="search" name="search" id="search" placeholder="Search">
+                        <div class="search-icons">
+                            <button type="submit"><i class='bx bx-search'></i></button>
+                            <i class="fas fa-times clear-search" id="clearSearch"></i>
+                        </div>
+                    </form>
+                </div>
+                
+        
+                <nav class="nav-links" id="navLinks">
+                    <ul class="nav-lists">
+                        <li><a href="#">Self Service Advert</a></li>
+                        <li><a href="#">Site Map</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+    
+                    <!-----Close Mobile Menu------>
+    
+                    <div class="mobile-menu-close" id="mobileMenuClose">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </nav>
+        
+    
+                <div class="login-signup-btns">
+                    <div id="registerModalContainer">
+                        <a href="#" class="signUp signup-btn" id="openRegister">Sign Up</a>
+                    </div>
+    
+                    <div class="loginModalContainer">
+                        <a href="#" class="logIn login-btn" id="openLogin">Login</a>
+                    </div>
+                </div>
+                
+                <!-----------Register modal------------>
+    
+                    <div class="modal-overlay" id="registerModalOverlay"></div>
+    
+                    <div class="register-container modal" id="register-section">
+                      
+                        <div class="register-left-panel">
+                            <div class="register-greeting">
+                                <h1>Welcome!</h1>
+                                <p>Create an account to get started</p>
+                            </div>
+                            <div class="register-terms">
+                                <h4>Terms and Conditions</h4>
+                                <ul>
+                                    <li>You are only allowed to submit content that you have created yourself.</li>
+                                    <li>You are not allowed to upload photos pretending to be someone else.</li>
+                                    <li>No nudity, pornography, or unlawful content is permitted.</li>
+                                    <li>You grant GhanaWeb the right to publish and use your content.</li>
+                                    <li>GhanaWeb reserves the right to reject/remove your content without explanation.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                        <div class="register-right-panel">
+                            <i class='bx bx-x-circle close-register' id="closeRegister"></i>
+                            <h2>REGISTER</h2>
+                            <p>Already have an account? <a href="#" id="desktopLogin">Sign in</a></p>
+                    
+                            <form class="register-inputs" id="desktopRegisterForm">
+                                <div class="register-grid">
+                                    <div class="field-group">
+                                        <label for="reg-surname">Surname</label>
+                                        <input type="text" name="surname" id="reg-surname" required>
+                                    </div>
+                    
+                                    <div class="field-group">
+                                        <label for="reg-other-names">Other names</label>
+                                        <input type="text" name="other-names" id="reg-other-names" required>
+                                    </div>
+                    
+                                    <div class="field-group">
+                                        <label for="reg-email">Email</label>
+                                        <input type="email" name="email" id="reg-email" required>
+                                    </div>
+
+                                    <div class="field-group">
+                                        <label for="reg-password">Password</label>
+                                        <input type="password" name="password" id="reg-password" required>
+                                    </div>
+                    
+                                    <div class="field-group">
+                                        <label for="phone">Phone</label>
+                                        <input type="tel" id="phone" name="phone">
+                                    </div>
+                    
+                                    <div class="field-group">
+                                        <label for="reg-dob">Date of Birth</label>
+                                        <input type="date" id="reg-dob" name="dob" required>
+                                    </div>
+                    
+                                    <div class="field-group">
+                                        <label for="reg-gender">Gender</label>
+                                        <select id="reg-gender" name="gender" required>
+                                            <option value="">Select option</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+                    
+                                <div class="field-group">
+                                    <label for="reg-terms">Do you accept the terms?</label>
+                                    <select id="reg-terms" name='terms' required>
+                                        <option value="">No, I reject the terms</option>
+                                        <option value="yes">Yes, I accept the terms</option>
+                                    </select>
+                                </div>
+                                
+                    
+                                <div class="mobile-field-group">
+                                    <div class="terms-policy">  
+                                        <input type="checkbox" id="reg-terms-checkbox" name="termsCheckbox" required>
+                                        <label for="reg-terms-checkbox" class="mobile-policy">
+                                        By continuing, you agree to the Terms & Privacy Policy
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="field-group">
+                                    <button type="submit" class="register-btn" type="submit">Sign Up</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                
+    
+                <!-----------Login  modal------------>
+    
+                    <div class="modal-overlay" id="modalOverlay"></div>
+                    <div class="login-container modal" id="login-section">
+                        <div class="login-left-panel">
+                            <h1>Welcome Back!</h1>
+                            <p>Sign in to continue</p>
+                        </div>
+                    
+                        <div class="login-right-panel">
+                            <i class='bx bx-x-circle close-login' id="closeLogin"></i>
+                            <h2>LOG IN</h2>
+                            <p>New here? <a href="#" id="desktopRegister">Create an account</a></p>
+                    
+                            <form action="" id="desktopLoginForm">
+                                <div class="field-wrapper">
+                                    <input type="text" name="user-email" id="user-email" placeholder="Email" required>
+                                    <i class='bx bxs-envelope login-icon'></i>
+                                </div>
+                                
+                                <div class="field-wrapper">
+                                    <input type="password" name="user-password" id="user-password" placeholder="Password" required>
+                                    <i class="fa-solid fa-eye login-icon"></i>
+                                </div>
+                    
+                                <div class="field-wrapper">
+                                    <a href="#" class="forgot-password">Forgot password?</a>
+                                </div>
+                    
+                                <div class="field-wrapper">
+                                    <button class="login-btn" type="submit">Sign in</button>
+                                </div>
+
+                            </form>
+
+                            <div class="field-wrapper">
+                                <a href="#" id="logoutBtn" style="display: none;">
+                                    Logout
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                            
+            </div>
+        </header>
+
+        <!------MOBILE SEARCH DEVICE------->
+
+        <div class="mobile-search" id="mobileSearch">
+       
+
+            <form action="" class="search-form">
+                <i class="ri-search-line search-icon"></i>
+
+                <input type="search" class="search-input" id="searchInput" placeholder="search here">
+                <p>hbsdhjnmbsj</p>
+            </form>
+
+            <i class="ri-close-line search-close" id="searchClose"></i>
+        </div>
+
+
+        <!-----------MOBILE REGISTER DEVICE--------------->            
+        <div class="mobile-register-container mobile-modal" id="mobileRegisterSection">
+      
+            <div class="mobile-register-form" id="mobileRegisterWrapper">
+                <div class="register-top-panel">
+
+                    <div class="mobile-register-greeting">
+                        <h1>Hello,</h1>
+                        <p>Sign Up to get started</p>
+                    </div>
+
+                    <div class="mobile-register-terms">
+                        <h4>Terms and Conditions</h4>
+                    </div>
+
+                </div>
+    
+                <div class="register-bottom-panel">
+
+                    <h2 class="mobile-h2">REGISTER</h2>
+                    <p class="mobile-p">
+                        Already have an account? <a href="#" id="mobileGoToLogin">Sign in</a>
+                    </p>
+                    
+                    
+    
+                    <form action="" class="register-inputs" id="mobileRegisterForm">
+                        <div class="mobile-register-grid">
+
+                            <div class="mobile-field-group">
+                                <label for="reg-surname">Surname</label>
+                                <input type="text" name="surname" id="mobile-reg-surname" required>
+                            </div>
+    
+                            <div class="mobile-field-group">
+                                <label for="reg-other-names">Other names</label>
+                                <input type="text" name="other-names" id="mobile-reg-other-names" required>
+                            </div>
+    
+                            <div class="mobile-field-group">
+                                <label for="reg-email">Email</label>
+                                <input type="email" name="email" id="mobile-reg-email" autocomplete="none" required>
+                            </div>
+
+                            <div class="mobile-field-group">
+                                <label for="reg-password">Password</label>
+                                <input type="password" name="password" id="mobile-reg-password" required>
+                                <!--<i class="fa-solid fa-eye mobile-login-icon"></i>-->
+                            </div>
+    
+                            <div class="mobile-field-group">
+                                <label for="reg-phone">Phone</label>
+                                <input type="tel" id="mobile-phone" name="phone">
+                            </div>
+    
+                            <div class="mobile-field-group">
+                                <label for="reg-dob">Date of Birth</label>
+                                <input type="date" id="mobile-reg-dob" name="dob" required>
+                            </div>
+    
+                            <div class="mobile-field-group">
+                                <label for="reg-gender">Gender</label>
+
+                                <select id="mobile-reg-gender" name="gender" required>
+                                    <option value="">Select option</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+
+                        </div>
+    
+                        <div class="mobile-field-group">
+                            <label for="mobile-reg-terms">Do you accept the terms?</label>
+                            <select id="mobile-reg-terms" name="terms" required>
+                                <option value="">No, I reject the terms</option>
+                                <option value="yes">Yes, I accept the terms</option>
+                            </select>
+                        </div>
+    
+                        <div class="mobile-field-group">
+                            <div class="terms-policy">  
+                                <input type="checkbox" id="reg-terms-checkbox" name="termsCheckbox" required>
+                                <label for="reg-terms-checkbox" class="mobile-policy">
+                                By continuing, you agree to the Terms & Privacy Policy
+                                </label>
+                            </div>
+                        </div>
+                          
+
+                        <div class="mobile-field-group">
+                            <button type="submit" class="mobile-register-btn" type="submit">Sign Up</button>
+                        </div>
+                    
+
+                    </form>
+
+                </div>
+            </div>
+
+            <i class='bx bx-x-circle mobile-close-register' id="mobileCloseRegister"></i>
+
+        </div>
+
+
+    
+        <!--------MOBILE LOGIN DEVICE--------->
+
+
+        <div class="mobile-login-container mobile-modal" id="mobileLoginSection">
+    
+            <div class="mobile-login-form">
+    
+                <div class="login-top-panel">
+                    <h1>Welcome,</h1>
+                    <p>Sign in to continue</p>
+                </div>
+          
+                <div class="login-bottom-panel">
+                    
+                    <h2 class="mobile-h2">SIGN IN</h2>
+                    <p class="mobile-p">New here? <a href="#" id="mobileGoToRegister">Create an account</a></p>
+          
+                        <form action="" id="mobileLoginForm">
+                            <div class="mobile-field-wrapper">
+                                <input type="text" name="user-email" id="user-email" placeholder="Email" required>
+                                <i class='bx bxs-envelope mobile-login-icon'></i>
+                            </div>
+                      
+                            <div class="mobile-field-wrapper">
+                                <input type="password" name="user-password" id="user-password" placeholder="Password" required>
+                                <i class="fa-solid fa-eye mobile-login-icon"></i>
+                            </div>
+          
+                            <div class="mobile-field-wrapper">
+                                <a href="#" class="forgot-password">Forgot password?</a>
+                            </div>
+          
+                            <div class="mobile-field-wrapper">
+                                <button class="mobile-login-btn" type="submit">Sign in</button>
+                            </div>
+
+                           
+                        </form>
+
+                         <!----LOGOUT BUTTON----->
+                         <div class="field-wrapper">
+                            <a href="#" id="logoutBtn" style="display: none;">
+                                Logout
+                            </a>
+                        </div>
+                </div>
+            </div>   
+            <i class='bx bx-x-circle mobile-close-login' id="mobileCloseLogin"></i> 
+        </div>
+
+
+       
+    
+
+
+        <!---------- SWIPER------------>
+
+        <div class="swiper mySwipper" id="swiperContainer">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img src="./images/Country/hogbetsotso-festival.webp" alt="Slide" class="slide-image">
+                    <div class="image_data">
+                        <a href="#" class="text"> Hogbetsotso-Festival celebrated by the people of Anlo </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./images/Country/panafric.jpg" alt="Slide" class="slide-image">
+                    <div class="image_data">
+                        <a href="#" class="text"> Pan African Festival of Arts and Culture</a>
+                    </div>
+                </div>
+
+                
+
+                <div class="swiper-slide">
+                    <img src="./images/Country/wote.jpeg" width="">
+                    <div class="image_data">
+                        <a href="#" class="text">Chale Wote Street Art Gana</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./images/Country/Otumfuo-20.jpg" alt="Slide" class="slide-image">
+                    <div class="image_data">
+                        <a href="#" class="text">best of Ghana With Akwasidae-Festival </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next nav-btn"></div>
+            <div class="swiper-button-prev nav-btn"></div>
+       
+
+       
+        </div>
+
+        <!--------------------OTHER LINKS----------------->
+
+        <!-- Swiper Container -->
+        <div class="swiper link-swiper-container" id="mySwiperLink">
+            <div class="swiper-wrapper link-swiper-wrapper">
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="Home.html" class="thin-bg-link home-link">Home</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="news.html" class="thin-bg-link news-link">News</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="sports.html" class="thin-bg-link sports-link">Sports</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="Business.html" class="thin-bg-link business-link">Business</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="Entertainment.html" class="thin-bg-link entertainment-link">Entertainment</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="Africa.html" class="thin-bg-link africa-link">Africa</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="GhanaWebTV.html" class="thin-bg-link ghanawebtv-link">GhanaWebTV</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="opinions.html" class="thin-bg-link opinions-link">Opinions</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="cartoons.html" class="thin-bg-link cartoons-link">Cartoons</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="SayItLoud.html" class="thin-bg-link sayitloud-link">Say It Loud</a>
+              </div>
+          
+              <div class="swiper-slide link-swiper-slide">
+                <a href="Country.html" class="thin-bg-link country-link">Country</a>
+              </div>
+          
+            </div>
+        </div>
+
+
+        <!-----------COUNTRY SECTION------------>
+
+        <section class="country-section">
+
+            <div class="country-top-layer">
+
+                <div class="country-style-wrapper">
+                    <div class="country-top-layer-style">
+                        Country
+                    </div>
+                </div>
+
+                <div class="country-top-layer-links">
+
+                    <a href="#">Education</a>
+                    <a href="#">Food</a>
+                    <a href="#">Foreign Affairs</a>
+                    <a href="#">Geography, Climate...</a>
+                    <a href="#">Governmaent/Polictics</a>
+                    <a href="#">Health</a>
+                    <a href="#">History</a>
+                    <a href="#">Military</a>
+                    <a href="#">Science & Technology</a>
+
+                    <div class="country-dropdown-container">
+                        <a href="#" class="country-dropdown-toggle">
+                            More <span class="triangle">&#9662;</span>
+                        </a>
+
+                        <div class="country-dropdown-menu">
+                            <a href="#">Transport </a>
+                            <a href="#">Telecommunications
+                                 </a>
+                            <a href="#">Tourism /a>
+                            <a href="#">Ethnic Groups</a>
+                            <a href="#">Languages</a>
+                            <a href="#">Ghana Dictionary</a>
+                            <a href="#">Famous Ghanaians</a>
+                            <a href="#">Statics </a>
+                            <a href="#">FAQ </a>
+                            <a href="#">Did you know that... </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="country-second-layer">
+
+                <div class="country-wrapper">
+
+                    <div class="country-left-side">
+
+                        <h6 class="country-header">Country Information</h6>
+
+                        <div class="country-links">
+                            <a href="">Ghana's Famous People</a>
+                        </div>
+
+                        <div class="country-links">
+                            <a href="">  Education</a>
+                        </div>
+
+                        <div class="country-links">
+                            <a href="">Food</a>
+                        </div>
+
+                        <div class="country-links">
+                            <a href="">  Foreign Affairs</a>
+                        </div>
+
+                        <div class="country-links">
+                            <a href="">  Geography, Climate...</a>
+                        </div>
+
+                        <div class="country-links">
+                            <a href="">  Government/Politics</a>
+                        </div>
+
+                        <div class="country-links">
+                            <a href="">Health</a>
+                        </div>
+
+                        <div class="country-links">
+                            <a href="">Military</a>
+                        </div>
+
+                        <div class="country-links">
+                            <a href="">History</a>
+                        </div>
+
+                        <div class="country-links">
+                            <a href="">Science and Technology</a>
+                        </div>
+
+                        <div class="country-links">
+                            <a href="">Telecommunications</a>
+                        </div>
+
+                        <div class="country-links">
+                            <a href="">Transport</a>
+                        </div>
+
+                        <div class="country-links">
+                            <a href="">Tourism</a>
+                        </div>
+
+                        <h6 class="country-header">People</h6>
+
+                        <div class="country-links">
+                            <a href="">Ethnic Groups</a>
+                        </div>
+
+                        <div class="country-links">
+                            <a href="">Languages</a>
+                        </div>
+
+                        <div class="country-links">
+                            <a href="">Ghana Dictionary</a>
+                        </div>
+
+                        <div class="country-links">
+                            <a href="">Famous Ghanaians</a>
+                        </div>
+
+                        <h6 class="country-header">Reference</h6>
+
+                        <div class="country-links">
+                            <a href="">Statistics</a>
+                        </div>
+
+                        <div class="country-links">
+                            <a href="">FAQ</a>
+                        </div>
+
+                        <div class="country-links">
+                            <a href="">Did You Know That....</a>
+                        </div>
+
+                        <h6 class="country-header">Other Sections</h6>
+
+                        <div class="country-links">
+                            <a href="Home.html">Homepage</a>
+                        </div>
+
+                        <div class="country-links">
+                            <a href="news.html">News</a>
+                        </div>
+
+                        <div class="country-links">
+                            <a href="Business.html">Business</a>
+                        </div>
+
+                        <div class="country-links">
+                            <a href="sports.html">Sports</a>
+                        </div>
+
+                        <div class="country-links">
+                            <a href="Entertainment.html">Entertainment</a>
+                        </div>
+
+                        <div class="country-links">
+                            <a href="Africa.html">Africa</a>
+                        </div>
+
+                        <div class="country-links">
+                            <a href="GhanaWebTV.html">TV / Radio</a>
+                        </div>
+
+                        <div class="country-links">
+                            <a href="">Walls</a>
+                        </div>
+
+                    </div>
+
+                    <div class="country-right-layer">
+
+                        <div class="country-grid-and-panel">
+
+                            <div class="country-grid-container">
+
+                                <div class="country-big-item1">
+                                    <img src="./images/Country/contry1.jpg" alt="">
+                                </div> 
+                                
+                                <div class="light-line"></div>
+                                
+                                <div class="bg-info">
+                                        <i class="fa-solid fa-globe rotating-globe"></i>
+
+                                    <div class="background-info">
+                                        Background Information
+                                    </div>
+
+                                </div>
+
+                                <div class="three-population">
+
+                                    <div class="population-one">
+                                        <p class="pop-header">official name: <a href="#">Republic of Ghana</a></p>
+
+                                        <p class="pop-header">official language: <a href="#">Official language english over 250 ethnic languages</a></p>
+                                    </div>
+
+                                    <div class="population-two">
+                                        <p class="pop-header">Population: <a href="#">50.4 million people(2024 est)</a></p>
+
+                                        <p class="pop-header">Life expentancy <a href="#">64 years</a></p>
+                                    </div>
+                                    <div class="population-three">
+                                        <p class="pop-header">President:
+                                           <a href="#">John Mahama</a>
+                                        </p>
+
+                                        <p class="pop-header">Parlament has: <a href="#"> 276 members</a></p>
+                                    </div>
+                                    
+
+                                </div>
+
+                                <div class="country-img-wrap">
+
+                                    <img src="./images/Country/accra-ghana.webp" alt="">
+
+                                    <p class="img-wrap">
+                                        Gross   Domestic Product (GDP) in Ghana was worth 67 billion US dollars in 2019.
+                                        The contribution of agriculture to the country’s GDP has suffered decline since 2009 from 31.8% to about 17.3 % as of 2019.
+                                        Export products are gold, cocoa, timber, bauxite manganese and electricity.Oil was found in 2007.
+                                        Economy relies heavily on foreign assistance and remittances from Ghanaians abroad. Currency is Ghana Cedi (GH¢).
+                                        Popular tourist destination
+                                    <p>
+
+                                </div>
+
+                                <div class="light-line"></div>
+
+                                <div class="country-bottom-container">
+
+                                    <div class="country-bottom-wrapper">
+
+                                        <div class="country-users-text">
+                                            <div class="users-info">
+
+                                                <div class="circle-container">
+                                                    <i class="fa-regular fa-circle-user users"></i>
+                                                </div>
+                                        
+                                                <div class="country-summary">
+                                                    Summary
+                                                </div>
+
+                                            </div>
+
+                                            <div class="country-bottom-text">
+                                                <div class="bottom-text">
+                                                    Ghana, a country on the West Coast of Africa, is one of the most thriving democracies on the continent. It has often been referred to as an "island of peace" in one of the most chaotic regions on earth. It shares boundaries with Togo to the east, la Cote d'Ivoire to the west, Burkina Faso to the north and the Gulf of Guinea, to the south. A recent discovery of oil in the Gulf of Guinea could make Ghana an important oil producer and exporter in the next few years.
+                                                </div> 
+                                                <div class="bottom-text">    
+                                                    The country's economy is dominated by agriculture, which employs about 40 percent of the working population. Ghana is one of the leading exporters of cocoa in the world. It is also a significant exporter of commodities such as gold and lumber. A country covering an area of 238,500 square kilometres, Ghana has an estimated population of 30.4 million (2020 est.), drawn from more than one hundred ethnic groups - each with its own unique language. English, however, is the official language, a legacy of British colonial rule.
+                                                </div>
+                                                <div class="bottom-text">
+                                                    In 1957, Ghana (formerly known as the Gold Coast) became the first country in sub-Saharan Africa to gain independence. After leading the country for nine years, the nation's founding president, Kwame Nkrumah was overthrown in a coup d'etat in 1966. After Kwame Nkrumah, Ghana was ruled by a series of military despots with intermittent experiments with democratic rule, most of which were curtailed by military takeovers. The latest and most enduring democratic experiment started in 1992 and it is what has gained recognition for Ghana as a leading democracy in Africa.
+                                                </div> 
+                                                <div class="bottom-text">
+                                                    Ghana has several tourist attractions such as the castles. Most of the major international airlines fly into and from the international airport in Accra. Domestic air travel is thriving and the country has a vibrant telecommunications sector, with six cellular phone operators and several internet service providers.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="country-right-details">
+                                            <div class="country-map">
+                                        
+                                                <iframe
+                                                    src="https://www.openstreetmap.org/export/embed.html?bbox=-3.245,4.321,1.215,11.509&layer=mapnik&marker=7.9465,-1.0232"
+                                                    allowfull screenloading="lazy"
+                                                    title="Map of Ghana">
+                                                </iframe>
+
+                                            </div>
+
+                                            
+                                            <div class="country-large-map">
+                                                <div class="ghana">
+                                                    Ghana
+                                                </div>
+                                                <div class="large-map-link">
+                                                    <a href="./AFRICA-map.html">view larger map</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="light-line"></div>
+
+                                            <div class="bg-info">
+                                                <i class="fa-solid fa-plus rotating-globe"></i>
+
+                                                <div class="background-info">
+                                                    More Information
+                                                </div>
+
+                                            </div>
+
+                                           
+
+                                            <div class="country-infomation">
+
+                                                <div class="country-more-info">
+                                                    <a href="">FAQ</a>
+                                                    <p>Frequently asked questions about Ghana</p>
+                                                </div>
+
+                                                <div class="country-more-info">
+                                                    <a href="">Travel Advise</a>
+                                                </div>
+
+                                                <div class="country-more-info">
+                                                    <a href="">Hotels</a>
+                                                </div>
+
+                                                <div class="country-more-info">
+                                                    <a href="">Famous People</a>
+                                                </div>
+
+                                                <div class="country-more-info">
+                                                    <a href="">Dictionary</a>
+                                                    <p>Typical Ghanaian expressions</p>
+                                                </div>
+
+                                                <div class="country-more-info">
+                                                    <a href="">Business Telephone Directory</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    
+                                </div>
+                            </div>
+
+
+                            <div class="country-right-panel">
+                                <div class="country-right-content">
+                                    <img src="./images/Opinion/side1.jpeg" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>        
+        </section>
+
+
+
+
+        <!--------FOOTER SECTION---------->
+
+        <div class="footer-section">
+            <div class="country-footer-container">
+                <div class="upper-container">
+                    <div class="country-footer-line"></div>
+
+                    <div class="footer-logo">
+                        <a href="Home.html" class="logo-link">
+                            <img src="./images/logo2.png" class="logo-image" alt="logo-image">
+                        </a>
+                    </div>
+
+                    <div class="footer-line"></div>
+                </div>
+
+    
+                <div class="bottom-footer">
+
+                    <div class="navigation-links">
+                        <h4 class="footer-nav-links">Navigation Links</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Sports</a></li>
+                            <li><a href="#">Business</a></li>
+                            <li><a href="#">Entertainment</a-></li>
+                            <li><a href="#">GhanaWebTv</a></li>
+                            <li><a href="#">Africa</a></li>
+                            <li><a href="#">Say It Loud</a></li>
+                            <li><a href="#">Cartoon</a></li>
+                            <li><a href="#">Opinions </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="useful-links">
+                        <h4 class="footer-nav-links">Useful Links</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Advertising</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Site Map</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="apps">
+                        <h4 class="footer-nav-links">Download Our Apps</h4>
+                        <div class="download-apps">
+                            <img src="./images/app_play_store1.svg" class="playstore" alt="">
+                            <img src="./images/app_store1.svg" class="appstore" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="lower-footer-line"></div>
+
+                    <div class="copyright">
+                        <p>Copyright &copy; 1994 - 2025 GhanaWeb. All Rights Reserved.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+       
+  
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        
+        <script src="./js/Index.js"></script>
+    </body> 
+</html>               
+        
